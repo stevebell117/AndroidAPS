@@ -24,8 +24,10 @@ import java.util.Locale;
 
 import info.nightscout.androidaps.MainApp;
 import info.nightscout.androidaps.R;
+import info.nightscout.androidaps.data.IobTotal;
 import info.nightscout.androidaps.logging.L;
 import info.nightscout.androidaps.plugins.configBuilder.ProfileFunctions;
+import info.nightscout.androidaps.plugins.treatments.TreatmentsPlugin;
 import info.nightscout.androidaps.services.Intents;
 import info.nightscout.androidaps.data.DetailedBolusInfo;
 import info.nightscout.androidaps.data.Profile;
@@ -50,6 +52,8 @@ import info.nightscout.androidaps.utils.SP;
 
 public class NSUpload {
     private static Logger log = LoggerFactory.getLogger(L.NSCLIENT);
+
+    public static long lastDevicestatusUpload = 0;
 
     public static void uploadTempBasalStartAbsolute(TemporaryBasal temporaryBasal, Double originalExtendedAmount) {
         try {
@@ -246,8 +250,17 @@ public class NSUpload {
                 }
             } else {
                 if (L.isEnabled(L.NSCLIENT))
-                    log.debug("OpenAPS data too old to upload");
+                    log.debug("OpenAPS data too old to upload, uploading IOB only");
+                TreatmentsPlugin.getPlugin().updateTotalIOBTreatments();
+                TreatmentsPlugin.getPlugin().updateTotalIOBTempBasals();
+                IobTotal bolusIob = TreatmentsPlugin.getPlugin().getLastCalculationTreatments();
+                IobTotal basalIob = TreatmentsPlugin.getPlugin().getLastCalculationTempBasals();
+                IobTotal iobTotal = IobTotal.combine(bolusIob, basalIob).round();
+
+                deviceStatus.iob = iobTotal.json();
+                deviceStatus.iob.put("time", DateUtil.toISOString(DateUtil.now()));
             }
+
             deviceStatus.device = "openaps://" + Build.MANUFACTURER + " " + Build.MODEL;
             JSONObject pumpstatus = ConfigBuilderPlugin.getPlugin().getActivePump().getJSONStatus(profile, profileName);
             if (pumpstatus != null) {
@@ -268,6 +281,7 @@ public class NSUpload {
             intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
             DbLogger.dbAdd(intent, deviceStatus.mongoRecord().toString());
+            lastDevicestatusUpload = DateUtil.now();
         } catch (JSONException e) {
             log.error("Unhandled exception", e);
         }

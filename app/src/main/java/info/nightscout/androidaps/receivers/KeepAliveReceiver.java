@@ -10,6 +10,7 @@ import android.os.PowerManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import info.nightscout.androidaps.Config;
 import info.nightscout.androidaps.Constants;
 import info.nightscout.androidaps.MainApp;
 import info.nightscout.androidaps.data.Profile;
@@ -18,6 +19,7 @@ import info.nightscout.androidaps.interfaces.PumpInterface;
 import info.nightscout.androidaps.logging.L;
 import info.nightscout.androidaps.plugins.configBuilder.ConfigBuilderPlugin;
 import info.nightscout.androidaps.plugins.configBuilder.ProfileFunctions;
+import info.nightscout.androidaps.plugins.general.nsclient.NSUpload;
 import info.nightscout.androidaps.queue.commands.Command;
 import info.nightscout.androidaps.utils.DateUtil;
 import info.nightscout.androidaps.utils.FabricPrivacy;
@@ -50,6 +52,9 @@ public class KeepAliveReceiver extends BroadcastReceiver {
         LocalAlertUtils.shortenSnoozeInterval();
         LocalAlertUtils.checkStaleBGAlert();
         checkPump();
+        if (Config.PUMPDRIVERS)
+            if (DateUtil.now() - NSUpload.lastDevicestatusUpload > T.mins(5).msecs())
+                NSUpload.uploadDeviceStatus();
 
         if (L.isEnabled(L.CORE))
             log.debug("KeepAlive received");
