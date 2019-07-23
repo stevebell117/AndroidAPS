@@ -1,5 +1,6 @@
 package info.nightscout.androidaps.plugins.general.signatureVerifier;
 
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 
@@ -51,7 +52,7 @@ public class SignatureVerifier extends PluginBase implements ConstraintsInterfac
     private Logger log = LoggerFactory.getLogger(L.CORE);
     private final Object $lock = new Object[0];
     private File revokedCertsFile;
-    private List<byte[]> revokedCerts;
+    List<byte[]> revokedCerts;
 
     public static SignatureVerifier getPlugin() {
         return plugin;
@@ -106,11 +107,13 @@ public class SignatureVerifier extends PluginBase implements ConstraintsInterfac
         MainApp.bus().post(new EventNewNotification(notification));
     }
 
-    private boolean hasIllegalSignature() {
+    boolean hasIllegalSignature() {
         try {
             synchronized ($lock) {
                 if (revokedCerts == null) return false;
-                Signature[] signatures = MainApp.instance().getPackageManager().getPackageInfo(MainApp.instance().getPackageName(), PackageManager.GET_SIGNATURES).signatures;
+                PackageManager packageManager = MainApp.instance().getPackageManager();
+                PackageInfo packageInfo = packageManager.getPackageInfo(MainApp.instance().getPackageName(), PackageManager.GET_SIGNATURES);
+                Signature[] signatures = packageInfo.signatures;
                 for (Signature signature : signatures) {
                     MessageDigest digest = MessageDigest.getInstance("SHA256");
                     byte[] fingerprint = digest.digest(signature.toByteArray());
@@ -190,7 +193,7 @@ public class SignatureVerifier extends PluginBase implements ConstraintsInterfac
         return readInputStream(new FileInputStream(revokedCertsFile));
     }
 
-    private List<byte[]> parseRevokedCertsFile(String file) {
+    List<byte[]> parseRevokedCertsFile(String file) {
         List<byte[]> revokedCerts = new ArrayList<>();
         for (String line : file.split("\n")) {
             if (line.startsWith("#")) continue;
