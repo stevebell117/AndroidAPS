@@ -1638,6 +1638,18 @@
     <string name="key_objectives_request_code" translatable="false">objectives_request_code</string>
     <string name="requestcode">Request code: %1$s</string>
 
+    <string name="biometric_failed">Fingerprint not recognized</string>
+    <string name="biometric_title">Authentication required</string>
+    <string name="biometric_description">Place your finger on the figerprint reader to verify your identity</string>
+    <string name="biometric_error_sdk_not_supported">Sdk version not supported</string>
+    <string name="biometric_error_hardware_not_supported">Device does not support biometric authentication</string>
+    <string name="biometric_error_fingerprint_not_available">Fingerprint is not registered in device</string>
+    <string name="biometric_error_permission_not_granted">Permission is not granted by user</string>
+    <string name="biometric_failure">Login not successful!</string>
+    <string name="biometric_cancelled">Authentication cancelled by user</string>
+    <string name="biometric_success">Authentication Successful</string>
+
+
     <plurals name="objective_days">
         <item quantity="one">%1$d day</item>
         <item quantity="other">%1$d days</item>

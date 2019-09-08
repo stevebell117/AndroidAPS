@@ -756,6 +756,13 @@ public class OverviewFragment extends Fragment implements View.OnClickListener, 
             case R.id.overview_treatmentbutton:
                 NewTreatmentDialog treatmentDialogFragment = new NewTreatmentDialog();
                 treatmentDialogFragment.show(manager, "TreatmentDialog");
+//                new BiometricManager(getContext()).authenticate(new Callback() {
+//                    @Override
+//                    public void run() {
+//                        log.debug(result.comment);
+//                    }
+//                });
+
                 break;
             case R.id.overview_insulinbutton:
                 new NewInsulinDialog().show(manager, "InsulinDialog");
