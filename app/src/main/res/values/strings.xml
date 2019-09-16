@@ -1642,6 +1642,9 @@
     <string name="objectives_hint">(check all correct answers)</string>
     <string name="profile_name">Profile name:</string>
     <string name="selected_profile">Selected:</string>
+    <string name="unitsnosemicolon">Units</string>
+    <string name="key_units" translatable="false">units</string>
+    <string name="doyouwantswitchprofile">Do you want to switch profile and discard changes made to current profile?</string>
 
     <plurals name="objective_days">
         <item quantity="one">%1$d day</item>
