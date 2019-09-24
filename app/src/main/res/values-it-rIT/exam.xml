@@ -11,7 +11,6 @@
     <string name="hypott_label">Argomento: Temp-Target \"Ipoglicemia\"</string>
     <string name="hypott_whenhypott">Perché è utile impostare un TT Ipoglicemia?</string>
     <string name="hypott_goinglow">Evitare che la glicemia vada in basso.</string>
-    <string name="hypott_havinglow">Per aiutare il recupero da una glicemia bassa.</string>
     <string name="hypott_preventoversmb">Per evitare che SMB reagisca all\'aumento della glicemia dovuto ai carboidrati a rapido assorbimento durante una ipo.</string>
     <string name="hypott_hint1">https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html</string>
     <string name="offlineprofile_whatprofile">Quale profilo può essere usato e configurato offline?</string>
@@ -47,7 +46,6 @@
     <string name="exercise_switchprofileabove100">Fare un cambio profilo sopra il 100%.</string>
     <string name="exercise_stoploop">Stoppare il Loop.</string>
     <string name="exercise_doitbeforestart">Impostare il Temp-Target \"Attività\" prima dell\'inizio dell\'esercizio.</string>
-    <string name="exercise_doitafterstart">Impostare il Temp-Target \"Attività\" dopo l\'inizio dell\'esercizio.</string>
     <string name="exercise_hint1">https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html#activity-temp-target</string>
     <string name="suspendloop_label">Argomento: Loop sospeso</string>
     <string name="suspendloop_doigetinsulin">Ricevo insulina quando il Loop è sospeso?</string>
@@ -116,7 +114,6 @@
     <string name="nsclient_label">Argomento: Monitoraggio dei bambini</string>
     <string name="nsclient_howcanyou">Come puoi monitorare AAPS del tuo bambino in remoto?</string>
     <string name="nsclient_nightscout">Usando un sito Nightscout.</string>
-    <string name="nsclient_dexcomfollow">L\'app Dexcom Follow se stai usando l\'app originale Dexcom.</string>
     <string name="nsclient_dexcomfollowxdrip">Dexcom Follow se stai usando l\'app xDrip.</string>
     <string name="nsclient_xdripfollower">xDrip in modalità follower.</string>
     <string name="nsclient_looponiphone">App Loop su iPhone.</string>
