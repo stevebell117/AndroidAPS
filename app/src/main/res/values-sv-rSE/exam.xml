@@ -11,7 +11,6 @@
     <string name="hypott_label">Ämne: \"Hypo\" temp mål</string>
     <string name="hypott_whenhypott">Varför är det användbart att sätta in en hypo TT?</string>
     <string name="hypott_goinglow">Förhindra att BG går lågt.</string>
-    <string name="hypott_havinglow">För att hjälpa till att återhämta sig från en episod med lågt BG-värde.</string>
     <string name="hypott_preventoversmb">För att förhindra att SMB går igång när de snabba kolhydraterna absorberas efter en hypo.</string>
     <string name="hypott_hint1">https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html</string>
     <string name="offlineprofile_whatprofile">Vilken profiltyp kan användas och konfigureras offline?</string>
@@ -47,7 +46,6 @@
     <string name="exercise_switchprofileabove100">Gör ett profilbyte med mer än 100%.</string>
     <string name="exercise_stoploop">Pausa loopen.</string>
     <string name="exercise_doitbeforestart">Ange ett temp-mål före träningspasset.</string>
-    <string name="exercise_doitafterstart">Ange ett temp-mål efter att träningspasset börjat.</string>
     <string name="exercise_hint1">https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html#activity-temp-target</string>
     <string name="suspendloop_label">Ämne: Pausad eller inaktiverad loop</string>
     <string name="suspendloop_doigetinsulin">Får jag insulin när loopen är pausad eller inaktiverad?</string>
@@ -116,7 +114,6 @@
     <string name="nsclient_label">Ämne: Övervaka barn</string>
     <string name="nsclient_howcanyou">Hur kan du övervaka AAPS för ditt barn på distans?</string>
     <string name="nsclient_nightscout">Med hjälp av en Nightscout webbplats.</string>
-    <string name="nsclient_dexcomfollow">Appen Dexcom Follow om du använder Dexcoms app på barnets mobil.</string>
     <string name="nsclient_dexcomfollowxdrip">Dexcom Follow om du använder xDrip på barnets mobil.</string>
     <string name="nsclient_xdripfollower">xDrip i följarläge.</string>
     <string name="nsclient_looponiphone">Appen Loop för iPhone.</string>
