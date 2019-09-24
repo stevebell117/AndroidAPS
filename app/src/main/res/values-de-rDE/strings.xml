@@ -1399,7 +1399,7 @@ Unerwartetes Verhalten.</string>
     <string name="unfinshed_button">Nächte unbeantwortete</string>
     <string name="close">Schließen</string>
     <string name="requestcode">Erfrage Code:: %1$s</string>
-    <string name="objectives_hint">(kreuze alle richtigen Antworten an)</string>
+    <string name="objectives_hint">(Kreuze alle richtigen Antworten an.)</string>
     <plurals name="objective_days">
         <item quantity="one">%1$d Tag</item>
         <item quantity="other">%1$d Tage</item>
