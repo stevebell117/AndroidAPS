@@ -57,9 +57,6 @@
     <string name="description_wear">Surveillez et contrôlez AndroidAPS en utilisant votre montre WearOS.</string>
     <string name="description_xdrip_status_line">Afficher les informations de votre Boucle sur votre écran de montre xDrip+.</string>
     <string name="description_sms_communicator">Commander à distance AndroidAPS en utilisant les commandes SMS.</string>
-    <string name="objectives_button_back">Retour</string>
-    <string name="objectives_button_start">Démarrer</string>
-    <string name="objectives_button_verify">Vérifier</string>
     <string name="nsprofileview_units_label">Unités</string>
     <string name="nsprofileview_dia_label">DAI</string>
     <string name="nsprofileview_ic_label">I:G (Ratio Insuline/Glucides)</string>
@@ -177,9 +174,6 @@
     <string name="unsupportedclientver">Version incompatible du NSClient</string>
     <string name="unsupportednsversion">Version incompatible de Nightscout</string>
     <string name="nsclientnotinstalled">NSClient non installé. Enregistrement perdu !</string>
-    <string name="objectives_bgavailableinns">Glycémie disponible sur NS</string>
-    <string name="objectives_pumpstatusavailableinns">Statut pompe disponible sur NS</string>
-    <string name="objectives_manualenacts">Activation manuelle</string>
     <string name="loopdisabled">BOUCLE DÉSACTIVÉE PAR RESTRICTIONS</string>
     <string name="treatments_wizard_basaliob_label">Basal IA</string>
     <string name="bolusconstraintapplied">Restriction du Bolus appliquée</string>
@@ -318,8 +312,6 @@ L\'ENSEMBLE DES RISQUES LIÉS À LA QUALITÉ ET À LA PERFORMANCE DU PROGRAMME S
     <string name="overview_bolusprogress_stoppressed">BOUTON ARRÊT ACTIVÉ</string>
     <string name="waitingforpump">Attente connection pompe</string>
     <string name="overview_bolusprogress_goingtodeliver">%1$.2fU vont être injectées</string>
-    <string name="objectives_0_objective">Paramétrer la visualisation et la surveillance des données, analyser les débits de basal et les ratios</string>
-    <string name="objectives_0_gate">Vérifiez que la Glycémie est disponible sur Nightscout et que les données d’insuline ont été téléchargées de la pompe</string>
     <string name="youareonallowedlimit">Vous avez atteint la limite maximale</string>
     <string name="noprofileselected">Aucun profil séléctionné</string>
     <string name="smscommunicator_loophasbeendisabled">La Boucle été désactivée</string>
@@ -849,8 +841,6 @@ L\'ENSEMBLE DES RISQUES LIÉS À LA QUALITÉ ET À LA PERFORMANCE DU PROGRAMME S
     <string name="profileswitch_ismissing">ProfileSwitch manquant. S’il vous plaît faire un changement de profil ou appuyez sur « Activer le profil » dans le LocalProfile.</string>
     <string name="combo_bolus_count">Nombre de bolus</string>
     <string name="combo_tbr_count">Nombre de TBR</string>
-    <string name="objectivenotstarted">Objectif %1$d non démarré</string>
-    <string name="objectivenotfinished">Objectif %1$d non terminé</string>
     <string name="pumpisnottempbasalcapable">Pompe n’est pas capable de basals temporaires</string>
     <string name="novalidbasalrate">Aucun taux basal valide provenant de la pompe</string>
     <string name="closedmodedisabledinpreferences">Mode de Boucle Fermée désactivé dans les préférences</string>
@@ -972,7 +962,6 @@ L\'ENSEMBLE DES RISQUES LIÉS À LA QUALITÉ ET À LA PERFORMANCE DU PROGRAMME S
     <string name="completed_well_done">Terminé, félicitations !</string>
     <string name="not_completed_yet">Pas encore terminé</string>
     <string name="time_elapsed">Temps écoulé</string>
-    <string name="nth_objective">%1$d. Objectif</string>
     <string name="poctech">Poctech</string>
     <string name="description_source_poctech">Recevoir les glycémies depuis l\'app Poctech</string>
     <string name="description_source_tomato">Recevoir les valeurs de glycémie de l\'application Tomato (appareil MiaoMiao)</string>
@@ -1359,16 +1348,4 @@ L\'ENSEMBLE DES RISQUES LIÉS À LA QUALITÉ ET À LA PERFORMANCE DU PROGRAMME S
     <string name="deliverpartofboluswizard">L\'assistant Bolus effectue le calcul mais seulement cette partie de l\'insuline calculée est délivrée. Utile avec l\'algorithme SMB.</string>
     <string name="loading">Chargement ...</string>
     <string name="snooze">Report alarme</string>
-    <plurals name="objective_days">
-        <item quantity="one">%1$d jour</item>
-        <item quantity="other">%1$d jours</item>
-    </plurals>
-    <plurals name="objective_hours">
-        <item quantity="one">%1$d heure</item>
-        <item quantity="other">%1$d heures</item>
-    </plurals>
-    <plurals name="objective_minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
-    </plurals>
 </resources>
