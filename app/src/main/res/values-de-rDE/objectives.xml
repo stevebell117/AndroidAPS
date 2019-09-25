@@ -21,4 +21,16 @@
     <string name="objectives_autosens_gate">Loope eine Woche tagsüber mit regelmäßiger Kohlenhydrat-Eingabe</string>
     <string name="objectives_ama_objective">Aktiviere zusätzliche Funktionen für die Nutzung tagsüber wie z. B. den erweiterten Mahlzeitenassistenten (AMA)</string>
     <string name="objectives_smb_objective">Aktiviere zusätzliche Funktionen für die Nutzung tagsüber wie z. B. SMB</string>
+    <string name="objectives_smb_gate">Lies das Wiki und erhöhe maxIOB, damit der SMB gut funktioniert. Ein guter Anfang ist
+die Formel maxIOB = durchschnittlicher Essensbolus + 3 x höchste Basalrate</string>
+    <string name="objectives_bgavailableinns">BZ in Nightscout verfügbar</string>
+    <string name="objectives_pumpstatusavailableinns">Pumpen-Status in Nightscout verfügbar</string>
+    <string name="objectives_manualenacts">Manuelle Aktionen</string>
+    <string name="accomplished">Erfüllt: %1$s</string>
+    <string name="objectives_usage_objective">Lerne, wie AndroidAPS bedient wird</string>
+    <string name="objectives_usage_gate">Führe verschiedene Aktionen in AndroidAPS aus.</string>
+    <string name="objectives_useprofileswitch">Setzte das Profil für 10 Min. auf 90% (drücke dazu lange auf deinen Profilnamen im Homescreen)</string>
+    <string name="objectives_usedisconnectpump">Simuliere das Duschen . Trenne die Pumpe für 1 Std. (drücke dazu lang auf Open Loop im Homescreen)</string>
+    <string name="objectives_usereconnectpump">...und verbinde die Pumpe auf dieselbe Weise wieder</string>
+    <string name="objectives_usetemptarget">Erstelle ein benutzerdefiniertes temporäres Ziel mit 10 Min. Dauer (drücke lang auf Deinen aktuellen Zielwert im Homescreen)</string>
 </resources>
