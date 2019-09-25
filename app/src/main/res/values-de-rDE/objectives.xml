@@ -8,4 +8,8 @@
     <string name="objectivenotstarted">Objective %1$d nicht begonnen</string>
     <string name="objectivenotfinished">Objective %1$d nicht abgeschlossen</string>
     <string name="objectives_0_objective">Einrichten der Anzeige und Überwachung sowie Analysieren der Basalraten und Faktoren</string>
+    <string name="objectives_0_gate">Prüfe, ob der BZ-Wert in Nightscout angezeigt wird und die - Pumpen-Insulin-Daten erfolgreich hochgeladen werden</string>
+    <string name="objectives_openloop_objective">Beginne im Open Loop Modus</string>
+    <string name="objectives_openloop_gate">Probiere den Open Loop Modus für ein paar Tage aus und setze manuell ganz viele temporäre Basalraten. Richte temporäre Ziele ein und nutze sie (z.B. für Aktivität oder bei KH zur Hypobehandlung)</string>
+    <string name="objectives_maxbasal_objective">Versuche, den Open Loop und seine Empfehlungen für temporäre Basalraten nachzuvollziehen</string>
 </resources>
