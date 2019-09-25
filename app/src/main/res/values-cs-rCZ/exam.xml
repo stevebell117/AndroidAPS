@@ -114,7 +114,7 @@
     <string name="nsclient_label">Téma: Monitorování dětí</string>
     <string name="nsclient_howcanyou">Jak můžete na dálku monitorovat AAPS svého dítěte?</string>
     <string name="nsclient_nightscout">Pomocí stránky Nightscout.</string>
-    <string name="nsclient_dexcomfollow">* Dexcom follow, pokud používáte originální aplikaci Dexcom (pouze hodnoty glykémie).</string>
+    <string name="nsclient_dexcomfollow">Dexcom follow, pokud používáte originální aplikaci Dexcom (pouze hodnoty glykémie).</string>
     <string name="nsclient_dexcomfollowxdrip">Aplikace Dexcom Follow, pokud používáte aplikaci xDrip.</string>
     <string name="nsclient_xdripfollower">Aplikace xDrip v režimu sledování.</string>
     <string name="nsclient_looponiphone">Aplikace Loop na iPhone.</string>
