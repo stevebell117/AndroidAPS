@@ -114,6 +114,7 @@
     <string name="nsclient_label">Argomento: Monitoraggio dei bambini</string>
     <string name="nsclient_howcanyou">Come puoi monitorare AAPS del tuo bambino in remoto?</string>
     <string name="nsclient_nightscout">Usando un sito Nightscout.</string>
+    <string name="nsclient_dexcomfollow">L\'app Dexcom Follow se stai usando l\'app originale Dexcom (solo glicemia).</string>
     <string name="nsclient_dexcomfollowxdrip">Dexcom Follow se stai usando l\'app xDrip.</string>
     <string name="nsclient_xdripfollower">xDrip in modalità follower.</string>
     <string name="nsclient_looponiphone">App Loop su iPhone.</string>
@@ -153,6 +154,10 @@
     <string name="profileswitchtime_hint1">https://androidaps.readthedocs.io/en/latest/EN/Usage/Profiles.html?highlight=profile%20switch#timeshift</string>
     <string name="profileswitchtime_60">60</string>
     <string name="profileswitchtime__60">-60</string>
+    <string name="basalhelp_hint1">https://androidaps.readthedocs.io/en/latest/EN/Module/module.html#good-individual-dosage-algorithm-for-your-diabetes-therapy</string>
+    <string name="basalhelp_label">Argomento: Aiuto le con velocità basali</string>
+    <string name="basalhelp_where">Dove andare per avere aiuto con le velocità basali e il resto.</string>
+    <string name="basalhelp_diabetesteam">Il tuo team diabetologico</string>
     <string name="basalhelp_google">Google</string>
     <string name="basalhelp_facebook">Facebook</string>
 </resources>
