@@ -116,6 +116,7 @@ Context | Edit Context</string>
     <string name="nsclient_label">Тема: Детский мониторинг</string>
     <string name="nsclient_howcanyou">Как можно дистанционно отслеживать AAPS вашего ребенка?</string>
     <string name="nsclient_nightscout">С помощью сайта Nightscout.</string>
+    <string name="nsclient_dexcomfollow">Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК).</string>
     <string name="nsclient_dexcomfollowxdrip">Dexcom Follow, если вы используете приложение xDrip.</string>
     <string name="nsclient_xdripfollower">xDrip в режиме follower.</string>
     <string name="nsclient_looponiphone">Приложения Loop на iPhone.</string>
