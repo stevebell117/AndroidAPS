@@ -50,4 +50,22 @@
     <string name="usetemptarget_hint">https://androidaps.readthedocs.io/en/latest/CROWDIN/cs/Getting-Started/Screenshots.html#hlavni-stranka</string>
     <string name="useaction_hint">https://androidaps.readthedocs.io/en/latest/CROWDIN/cs/Getting-Started/Screenshots.html#konfigurace</string>
     <string name="usescale_hint">https://androidaps.readthedocs.io/en/latest/CROWDIN/cs/Getting-Started/Screenshots.html#hlavni-stranka</string>
+    <plurals name="objective_days">
+        <item quantity="one">%1$d den</item>
+        <item quantity="few">%1$d dnů</item>
+        <item quantity="many">%1$d dnů</item>
+        <item quantity="other">%1$d dnů</item>
+    </plurals>
+    <plurals name="objective_hours">
+        <item quantity="one">%1$d hodina</item>
+        <item quantity="few">%1$d hodin</item>
+        <item quantity="many">%1$d hodin</item>
+        <item quantity="other">%1$d hodin</item>
+    </plurals>
+    <plurals name="objective_minutes">
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="few">%1$d minut</item>
+        <item quantity="many">%1$d minut</item>
+        <item quantity="other">%1$d minut</item>
+    </plurals>
 </resources>
