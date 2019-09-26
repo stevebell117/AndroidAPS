@@ -61,5 +61,21 @@
     <string name="extendedcarbs_add">Rechne Fett und Proteine in Kohlenhydrate um und füge sie zu Deiner Bolusberechnung hinzu.</string>
     <string name="extendedcarbs_useextendedbolus">Verwende einen verzögerten Bolus, um Fett und Proteine abzudecken.</string>
     <string name="extendedcarbs_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/Extended-Carbs.html</string>
+    <string name="nsclient_label">Thema: Loop von Kindern überwachen</string>
+    <string name="nsclient_howcanyou">Wie kannst Du den Loop eines Kindes mit AAPS aus der Ferne mitverfolgen?</string>
+    <string name="nsclient_nightscout">Mit einer Nightscout-Website.</string>
     <string name="nsclient_dexcomfollow">Dexcom Follow App zusammen mit der originalen Dexcom App (nur BZ).</string>
+    <string name="nsclient_dexcomfollowxdrip">Über Dexcom Follow, falls Du die xDrip App verwendest.</string>
+    <string name="nsclient_xdripfollower">xDrip im Follower Modus.</string>
+    <string name="nsclient_looponiphone">Loop App auf einem iPhone.</string>
+    <string name="nsclient_spikeiphone">Spike App auf einem iPhone.</string>
+    <string name="nsclient_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Children/Children.html</string>
+    <string name="isf_label">Thema: Korrekturfaktoren (ISF)</string>
+    <string name="isf_increasingvalue">ERHÖHUNG der ISF-Zahl führt zu geringerer Insulinabgabe, wenn Du Deinen Glukosewert über den Bolusrechner senken willst.</string>
+    <string name="isf_decreasingvalue">SENKUNG der ISF-Zahl führt zu geringerer Insulinabgabe wenn Du Deinen Glukosewert über den Bolusrechner senken willst.</string>
+    <string name="isf_noeffect">Die Änderung des ISF hat keinen Einfluss darauf, wie viel Insulin durch AAPS zur Korrektur hoher Werte abgegeben wird.</string>
+    <string name="isf_preferences">Du musst den ISF in den Einstellungen eingeben.</string>
+    <string name="isf_profile">Wenn Du einen ISF-Wert im Profil änderst, wird dies sofort vom Loop berücksichtigt.</string>
+    <string name="isf_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#korrekturfaktor-isf-mg-dl-ie-oder-mmol-l-ie</string>
+    <string name="isf_hint2">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/Profiles.html</string>
 </resources>
