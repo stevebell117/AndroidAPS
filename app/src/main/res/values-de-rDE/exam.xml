@@ -78,4 +78,13 @@
     <string name="isf_profile">Wenn Du einen ISF-Wert im Profil änderst, wird dies sofort vom Loop berücksichtigt.</string>
     <string name="isf_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#korrekturfaktor-isf-mg-dl-ie-oder-mmol-l-ie</string>
     <string name="isf_hint2">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/Profiles.html</string>
+    <string name="ic_label">Thema: Kohlenhydrat-Faktoren (IC)</string>
+    <string name="ic_increasingvalue">Eine ERHÖHUNG des IC-Wertes (\"KH-Faktors\") führt dazu, dass für die gleiche Kohlenhydrat-Menge weniger Insulin abgegeben wird.</string>
+    <string name="ic_decreasingvalue">Eine SENKUNG des IC-Wertes (\"KH-Faktors\") führt dazu dass für dieselbe Kohlenhydrat-Menge weniger Insulin abgegeben wird.</string>
+    <string name="ic_noeffect">Stelle Dir vor, COB ist 0. Eine Änderung des IC-Wertes würde dazu führen, dass eine andere Insulinmenge zum Korrigieren des Glukosewertes verwendet wird.</string>
+    <string name="ic_different">Der IC-Wert muss sich unterscheiden, je nachdem, ob Du eine BE mit 10g oder mit 12g berechnest.</string>
+    <string name="ic_meaning">IC bedeutet: Wie viele BE werden durch eine Einheit Insulin abgedeckt?</string>
+    <string name="ic_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#kh-faktor-carbohydrate-to-insulin-ratio-cr-g-ie</string>
+    <string name="profileswitch_label">Thema: Profilwechsel</string>
+    <string name="profileswitch_pctwillchange"> Durch einen Profilwechsel auf 90%…</string>
 </resources>
