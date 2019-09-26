@@ -51,6 +51,7 @@
     <string name="suspendloop_doigetinsulin">Wird Insulin abgegeben, wenn ich den Loop pausiere?</string>
     <string name="suspendloop_yes">Ja, die Standard-Basalrate.</string>
     <string name="suspendloop_no">Nein, die Insulinabgabe ist gestoppt.</string>
+    <string name="basaltest_label">Thema: Basalrate, Korrektur- und Kohlenhydratfaktoren überprüfen</string>
     <string name="wrongcarbs_label">Thema: Verschätzte Kohlenhydratmengen</string>
     <string name="wrongcarbs_whattodo">Du hast eine falsche Kohlenhydratmenge eingegeben. Wie solltest Du vorgehen?</string>
     <string name="wrongcarbs_treatmentstab">Gehe zu Behandlungen, lösche die falsche KH-Menge und gib die korrekte Menge ein.</string>
@@ -87,4 +88,27 @@
     <string name="ic_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#kh-faktor-carbohydrate-to-insulin-ratio-cr-g-ie</string>
     <string name="profileswitch_label">Thema: Profilwechsel</string>
     <string name="profileswitch_pctwillchange"> Durch einen Profilwechsel auf 90%…</string>
+    <string name="profileswitch_basalhigher">wird 10% MEHR Basalinsulin abgegeben.</string>
+    <string name="profileswitch_basallower">wird 10% WENIGER Basalinsulin abgegeben.</string>
+    <string name="profileswitch_ichigher">liegt der IC-Wert (KH-Faktor) 10% HÖHER.</string>
+    <string name="profileswitch_iclower">liegt der IC-Wert (KH-Faktor) 10% NIEDRIGER.</string>
+    <string name="profileswitch_isfhigher">liegt der ISF-Wert (Korrekturfaktor) 10% HÖHER.</string>
+    <string name="profileswitch_isflower">wird der ISF-Wert (Korrekturfaktor) 10% NIEDRIGER sein.</string>
+    <string name="profileswitch_overall">wird 10% weniger Insulin abgegeben.</string>
+    <string name="profileswitch_targethigher">wird der Zielwert 10% HÖHER liegen.</string>
+    <string name="profileswitch_targetlower">wird der Zielwert 10% NIEDRIGER liegen.</string>
+    <string name="profileswitch_targetbottom">wird nur der untere Zielwert 10% NIEDRIGER liegen.</string>
+    <string name="profileswitch_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/Profiles.html#prozentsatz</string>
+    <string name="profileswitchtime_iwant">Du möchtest einen Profilwechsel machen, da Du eine Stunde früher aufstehst als üblich. Am einfachsten funktioniert dies über die Zeitverschiebung beim Profilwechsel. Welche Zahl musst Du eingeben?</string>
+    <string name="profileswitchtime_1">1</string>
+    <string name="profileswitchtime__1">-1</string>
+    <string name="profileswitchtime_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/Profiles.html#zeitverschiebung</string>
+    <string name="profileswitchtime_60">60</string>
+    <string name="profileswitchtime__60">-60</string>
+    <string name="basalhelp_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Module/module.html#gute-individuelle-profileinstellungen-fur-deine-diabetes-therapie</string>
+    <string name="basalhelp_label">Thema: Hilfe zur Einstellung der Basalraten</string>
+    <string name="basalhelp_where">An wen solltest Du Dich wenden, wenn Du Unterstützung zur Einstellung Deiner Basalrate etc. brauchst?</string>
+    <string name="basalhelp_diabetesteam">Dein Diabetes-Team</string>
+    <string name="basalhelp_google">Google</string>
+    <string name="basalhelp_facebook">Facebook</string>
 </resources>
