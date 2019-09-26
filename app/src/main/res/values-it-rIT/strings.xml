@@ -795,7 +795,7 @@
     <string name="insulin_increment_button_message">Quantità di insulina da aggiungere quando si preme il tasto</string>
     <string name="error_starting_cgm">Impossibile avviare l\'applicazione CGM. Assicurati che sia installata.</string>
     <string name="overview_cgm">CGM</string>
-    <string name="nav_historybrowser">Rivedi storico</string>
+    <string name="nav_historybrowser">Storico</string>
     <string name="wear_notifysmb_title">Notificare SMB</string>
     <string name="wear_notifysmb_summary">Mostrare SMB sullo smartwatch come un bolo standard.</string>
     <string name="ns_create_announcements_from_errors_title">Creare avvisi da errori</string>
