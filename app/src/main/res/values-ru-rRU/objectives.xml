@@ -14,4 +14,13 @@
     <string name="objectives_maxbasal_objective">Глубже понимаем незакольцованную систему Open Loop, включая ее рекомендации по временным базалам</string>
     <string name="objectives_maxbasal_gate">На основе полученного опыта определияем макс величину базала и вводим ее в помпу и настройки</string>
     <string name="objectives_maxiobzero_objective">Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)</string>
+    <string name="objectives_maxiobzero_gate">Работа в замкнутом цикле с макс активным инсулином IOB = 0 на протяжении нескольких дней избегая событий типа приостановка на низких ГК Low Suspend</string>
+    <string name="objectives_maxiob_objective">Настройка замкнутого цикла с поднятием макс величины IOB выше 0 и постепенным понижением целевой ГК</string>
+    <string name="objectives_maxiob_gate">Работа несколько дней и по кр мере одну ночь без срабатывания оповещений о низкой ГК</string>
+    <string name="objectives_autosens_objective">Настраиваем базал и коэффициенты с последующей активацией auto-sens</string>
+    <string name="objectives_autosens_gate">1 неделя успешной дневной работы с регулярным введением углеводов</string>
+    <string name="objectives_ama_objective">Активация таких доп функций для дневного времени как расширенный калькулятор болюса advanced meal assist</string>
+    <string name="objectives_smb_objective">Активация таких доп функций для дневного времени как супер микро болюс SMB</string>
+    <string name="objectives_smb_gate">Прочтите wiki и увеличьте maxIOB чтобы супер микро болюс SMB заработал как положено! Хорошее начало – maxIOB = средний болюс на еду + троекратный максимальный суточный базал</string>
+    <string name="objectives_bgavailableinns">гликемия доступна в NS</string>
 </resources>
