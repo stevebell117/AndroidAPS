@@ -8,5 +8,21 @@
     <string name="dia_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Configuration/Config-Builder.html#insulin</string>
     <string name="dia_meaningisequaltodiapump">Entspricht der Insulinwirkdauer, die Du in Deiner Pumpe eingestellt hast.</string>
     <string name="dia_valuemustbedetermined">Du musst den individuell für Dich passenden Wert (nicht weniger als 5 Stunden) ermitteln.</string>
+    <string name="hypott_label">Thema: Temporäres Ziel \"Hypo\"</string>
+    <string name="hypott_whenhypott">In welchen Fällen ist es sinnvoll, ein temporäres Ziel \"Hypo\" zu setzen?</string>
+    <string name="hypott_goinglow">Um niedrige BZ-Werte zu verhindern.</string>
+    <string name="hypott_preventoversmb">Um zu verhindern, dass nach einer Hypo der durch schnelle KH verursachte Anstieg zu einem SMB führt.</string>
+    <string name="hypott_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/temptarget.html</string>
+    <string name="offlineprofile_whatprofile">Welches Profil kann offline verwendet und konfiguriert werden?</string>
+    <string name="offlineprofile_label">Thema: Offline-Profil</string>
+    <string name="offlineprofile_nsprofile">NS-Profil kann verwendet, aber nicht konfiguriert werden.</string>
+    <string name="offlineprofile_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Configuration/Config-Builder.html#profil</string>
+    <string name="pumpdisconnect_label">Thema: Pumpe abkoppeln</string>
+    <string name="pumpdisconnect_whattodo">Wie gehst Du vor, wenn Du die Pumpe abkoppelst?</string>
+    <string name="pumpdisconnect_letknow">Teile dem Loop mit, dass kein Insulin in deinen Körper abgegeben wird. Klicke dazu auf \"Trenne Pumpe für...\".</string>
+    <string name="pumpdisconnect_dontchnage">Keine Änderung erforderlich, Pumpe einfach abkoppeln.</string>
+    <string name="pumpdisconnect_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#andere-einstellungen</string>
+    <string name="objectives_label">Thema: AndroidAPS Einstellungen</string>
+    <string name="objectives_howtosave">Welches ist die empfohlene Vorgehensweise, um ein Backup Deiner Einstellungen zu erstellen?</string>
     <string name="nsclient_dexcomfollow">Dexcom Follow App zusammen mit der originalen Dexcom App (nur BZ).</string>
 </resources>
