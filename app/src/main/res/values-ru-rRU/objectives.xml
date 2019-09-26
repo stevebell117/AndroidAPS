@@ -47,4 +47,25 @@
     <string name="requestcode">Код запроса: %1$s</string>
     <string name="objectives_hint">(отметьте все правильные ответы)</string>
     <string name="disconnectpump_hint">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/FAQ.html#what-to-do-when-taking-a-shower-or-bath</string>
+    <string name="usetemptarget_hint">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html#the-homescreen</string>
+    <string name="useaction_hint">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html#config-builder</string>
+    <string name="usescale_hint">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html#the-homescreen</string>
+    <plurals name="objective_days">
+        <item quantity="one">%1$d день</item>
+        <item quantity="few">%1$d дня</item>
+        <item quantity="many">%1$d дней</item>
+        <item quantity="other">%1$d д</item>
+    </plurals>
+    <plurals name="objective_hours">
+        <item quantity="one">%1$d час</item>
+        <item quantity="few">%1$d часа</item>
+        <item quantity="many">%1$d часов</item>
+        <item quantity="other">%1$d ч</item>
+    </plurals>
+    <plurals name="objective_minutes">
+        <item quantity="one">%1$d минута</item>
+        <item quantity="few">%1$d минут(ы)</item>
+        <item quantity="many">%1$d минут</item>
+        <item quantity="other">%1$d мин</item>
+    </plurals>
 </resources>
