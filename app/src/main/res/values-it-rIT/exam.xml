@@ -14,13 +14,13 @@
     <string name="hypott_preventoversmb">Per evitare che SMB reagisca all\'aumento della glicemia dovuto ai carboidrati a rapido assorbimento durante una ipo.</string>
     <string name="hypott_hint1">https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html</string>
     <string name="offlineprofile_whatprofile">Quale profilo può essere usato e configurato offline?</string>
-    <string name="offlineprofile_label">Argomento: Profilo Offline</string>
+    <string name="offlineprofile_label">Argomento: Profilo offline</string>
     <string name="offlineprofile_nsprofile">Il profilo NS può essere utilizzato, ma non configurato.</string>
     <string name="offlineprofile_hint1">https://androidaps.readthedocs.io/en/latest/EN/Configuration/Config-Builder.html#profile</string>
     <string name="pumpdisconnect_label">Argomento: Disconnessione dal micro</string>
     <string name="pumpdisconnect_whattodo">Cosa fare quando si toglie il micro?</string>
-    <string name="pumpdisconnect_letknow">Far sapere al Loop che non viene erogata insulina al tuo corpo facendo click su \"disconnettere micro\".</string>
-    <string name="pumpdisconnect_dontchnage">Non cambiare nulla nel Loop, staccare solo il micro.</string>
+    <string name="pumpdisconnect_letknow">Far sapere al loop che non viene erogata insulina al tuo corpo facendo click su \"disconnetti micro\".</string>
+    <string name="pumpdisconnect_dontchnage">Non cambiare nulla nel loop, staccare solo il micro.</string>
     <string name="pumpdisconnect_hint1">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/FAQ.html#other-settings</string>
     <string name="objectives_label">Argomento: Impostazioni di AndroidAPS</string>
     <string name="objectives_howtosave">Quali sono le migliori pratiche per il backup delle impostazioni?</string>
