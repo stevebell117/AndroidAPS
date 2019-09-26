@@ -1208,7 +1208,7 @@
     <string name="taskname">Nome task</string>
     <string name="edit_short">MODIFICA</string>
     <string name="please_choose_an_action_type">Scegli un tipo di azione:</string>
-    <string name="please_choose_a_trigger_type">Scegliere un tipo di trigger:</string>
+    <string name="please_choose_a_trigger_type">Scegli un tipo di trigger:</string>
     <string name="triggers">Trigger:</string>
     <string name="remove_label">RIMUOVI</string>
     <string name="preconditions">Presupposti:</string>
@@ -1222,17 +1222,17 @@
     <string name="medtronic_pump_type">Tipo micro</string>
     <string name="medtronic_pump_frequency">Frequenza micro</string>
     <string name="medtronic_pump_bolus_delay">Ritardo prima che il Bolo sia avviato (s)</string>
-    <string name="medtronic_pump_max_bolus">Max Bolo su Micro (U)</string>
-    <string name="medtronic_pump_max_basal">Max Basale su Micro (U/h)</string>
+    <string name="medtronic_pump_max_bolus">Max bolo su micro (U)</string>
+    <string name="medtronic_pump_max_basal">Max basale su micro (U/h)</string>
     <string name="medtronic_pump_encoding">Codifica Medtronic</string>
     <string name="medtronic_pump_frequency_us_ca">US &amp; Canada (916 MHz)</string>
     <string name="medtronic_pump_frequency_worldwide">Globale (868 Mhz)</string>
     <string name="medtronic_pump_encoding_4b6b_local">Codifica Software 4b6b</string>
     <string name="medtronic_pump_encoding_4b6b_rileylink">Codifica Hardware 4b6b</string>
     <string name="medtronic_custom_action_wake_and_tune">Risveglio e Sintonizzazione</string>
-    <string name="medtronic_custom_action_clear_bolus_block">Cancellare Blocco Bolo</string>
+    <string name="medtronic_custom_action_clear_bolus_block">Cancella blocco bolo</string>
     <string name="medtronic_custom_action_reset_rileylink">Reset Configurazione RileyLink</string>
-    <string name="medtronic_pump_battery_select">Tipo batteria (Power View)</string>
+    <string name="medtronic_pump_battery_select">Tipo batteria (Power view)</string>
     <string name="medtronic_pump_battery_no">Non selezionato (Simple view)</string>
     <string name="medtronic_pump_battery_alkaline">Alcalina (Extended view)</string>
     <string name="medtronic_pump_battery_lithium">Litio (Extended view)</string>
@@ -1243,9 +1243,9 @@
     <string name="rileylink_scanner_title">Scansione RileyLink</string>
     <string name="rileylink_scanner_ble_not_supported">Bluetooth Low Energy non supportato.</string>
     <string name="rileylink_scanner_ble_not_enabled">Bluetooth disabilitato.</string>
-    <string name="location_not_found_title">La Posizione è disabilitata</string>
+    <string name="location_not_found_title">La posizione è disabilitata</string>
     <string name="location_not_found_message">Affinché la ricerca bluetooth funzioni sui nuovi dispositivi, la localizzazione deve essere abilitata, ma può essere disabilitata dopo l\'associazione. AAPS non tiene traccia della tua posizione.</string>
-    <string name="location_yes">Abilitare</string>
+    <string name="location_yes">Abilita</string>
     <string name="location_no">No</string>
     <string name="rileylink_scanner_scanning">Scansione</string>
     <string name="rileylink_scanner_scanning_finished">Scansione terminata</string>
@@ -1260,7 +1260,7 @@
     <string name="rileylink_configured_address">Indirizzo configurato</string>
     <string name="rileylink_connected_device">Dispositivo connesso</string>
     <string name="rileylink_connection_status">Stato connessione</string>
-    <string name="rileylink_connection_error">Errore Connessione</string>
+    <string name="rileylink_connection_error">Errore connessione</string>
     <string name="rileylink_device">Dispositivo</string>
     <string name="rileylink_device_type">Tipo dispositivo</string>
     <string name="rileylink_device_model">Modello dispositivo</string>
@@ -1268,7 +1268,7 @@
     <string name="rileylink_last_device_contact">Ultimo contatto dispositivo</string>
     <string name="rileylink_firmware_version">RL Firmware</string>
     <!-- RL State -->
-    <string name="rileylink_state_bt_init">Inizializzazione Bluetooth…</string>
+    <string name="rileylink_state_bt_init">Inizializzazione bluetooth…</string>
     <string name="rileylink_state_bt_error">Errore Bluetooth</string>
     <string name="rileylink_state_bt_ready">Bluetooth pronto</string>
     <string name="rileylink_state_not_started">Non avviato</string>
@@ -1281,7 +1281,7 @@
     <string name="rileylink_error_not_rl">Il dispositivo non è RileyLink</string>
     <string name="rileylink_error_unreachable">RileyLink non raggiungibile</string>
     <string name="rileylink_error_bt_disabled">Bluetooth disabilitato</string>
-    <string name="rileylink_error_no_bt_adapter">Nessun adattatore Bluetooth</string>
+    <string name="rileylink_error_no_bt_adapter">Nessun adattatore bluetooth</string>
     <string name="rileylink_error_tuneup_failed">Sintonizzazione fallita</string>
     <string name="rileylink_error_pump_unreachable">Micro irraggiungibile</string>
     <string name="rileylink_error_pod_unreachable">Pod irraggiungibile</string>
