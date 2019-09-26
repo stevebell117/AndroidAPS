@@ -24,5 +24,13 @@
     <string name="pumpdisconnect_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#andere-einstellungen</string>
     <string name="objectives_label">Thema: AndroidAPS Einstellungen</string>
     <string name="objectives_howtosave">Welches ist die empfohlene Vorgehensweise, um ein Backup Deiner Einstellungen zu erstellen?</string>
+    <string name="objectives_exportsettings">Exportiere sie lokal auf Deinem Smartphone über den Menüpunkt \"Wartung\".</string>
+    <string name="objectives_storeelsewhere">Speichere die exportierte Datei an einen anderen Ort (E-Mail, Dropbox, Google Drive...).</string>
+    <string name="objectives_doexportonstart">Exportiere sie direkt nach der Installation von AAPS.</string>
+    <string name="objectives_doexportafterchange">Exportiere sie nach jeder Änderung einer Einstellung.</string>
+    <string name="objectives_doexportafterfirtssettings">Exportiere sie, nachdem Du die Ersteinrichtung abgeschlossen hast.</string>
+    <string name="objectives_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Usage/ExportImportSettings.html</string>
+    <string name="objectives_hint2">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Getting-Started/FAQ.html#was-sollte-ich-fur-den-notfall-immer-dabei-haben</string>
+    <string name="noisycgm_label">Thema: Verrauschte CGM-Werte</string>
     <string name="nsclient_dexcomfollow">Dexcom Follow App zusammen mit der originalen Dexcom App (nur BZ).</string>
 </resources>
