@@ -784,12 +784,12 @@
     <string name="enablesmbwithtemptarget_summary">Abilita SMB quando è attivo un target temporaneo (pasto a breve, attività)</string>
     <string name="enablesmbwithhightemptarget">Abilita SMB con target temporanei \"alti\"</string>
     <string name="enablesmbwithhightemptarget_summary">Abilita SMB quando è attivo un target temporaneo \"alto\"</string>
-    <string name="let_temp_basal_run">Lasciare in esecuzione / consentire la Basale Temporanea</string>
+    <string name="let_temp_basal_run">Lascia eseguire la basale temporanea</string>
     <string name="mute">Muto</string>
     <string name="overview_insulin_label">Insulina</string>
-    <string name="overview_carbs_label">Carboidrati</string>
+    <string name="overview_carbs_label">Carbs</string>
     <string name="overview_buttons_selection">Tasti</string>
-    <string name="show_calibration_button_summary">Inviare una calibrazione a xDrip+ o aprire la finestra di calibrazione del G5</string>
+    <string name="show_calibration_button_summary">Invia una calibrazione a xDrip+ o aprire la finestra di calibrazione del G5</string>
     <string name="show_cgm_button_summary">Aprire xDrip+, il pulsante indietro torna ad AAPS</string>
     <string name="carb_increment_button_message">Numero di carboidrati da aggiungere quando si preme il tasto</string>
     <string name="insulin_increment_button_message">Quantità di insulina da aggiungere quando si preme il tasto</string>
