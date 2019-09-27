@@ -995,7 +995,7 @@
     <string name="nsmalfunction">Malfunzionamento NSClient. Considera il riavvio di NS e NSClient.</string>
     <string name="as">AS</string>
     <string name="versionavailable">Versione %1$s disponibile</string>
-    <string name="time_offset">Deviazione oraria</string>
+    <string name="time_offset">Offset temporale</string>
     <string name="setupwizard_preferred_aps_mode">Modalità APS preferita</string>
     <string name="treatments_wizard_total_label">Totale</string>
     <string name="calculation_short">Calc</string>
