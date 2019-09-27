@@ -76,7 +76,6 @@
     <string name="whatistrue">Cosa è vero?</string>
     <string name="update_git">Hai bisogno di avere Git installato.</string>
     <string name="update_asap">Aggiornare non appena la nuova versione viene rilasciata.</string>
-    <string name="update_keys">Puoi usare le stesse chiavi di firma.</string>
     <string name="update_neverupdate">Non aggiornare mai se il sistema funziona bene.</string>
     <string name="update_askfriend">Chiedere al tuo amico il nuovo APK.</string>
     <string name="update_hint1">https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Update-to-new-version.html#update-to-a-new-version-or-branch</string>
@@ -143,7 +142,6 @@
     <string name="profileswitch_iclower">Il valore IC sarà il 10% più basso.</string>
     <string name="profileswitch_isfhigher">Il valore ISF sarà il 10% più alto.</string>
     <string name="profileswitch_isflower">Il valore ISF sarà il 10% più basso.</string>
-    <string name="profileswitch_overall">Riceverai il 10% in meno di insulina, in totale.</string>
     <string name="profileswitch_targethigher">Il target sarà il 10% più alto.</string>
     <string name="profileswitch_targetlower">Il target sarà il 10% più basso.</string>
     <string name="profileswitch_targetbottom">Solo il target inferiore sarà il 10% più basso.</string>
