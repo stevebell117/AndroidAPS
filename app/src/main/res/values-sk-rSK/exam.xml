@@ -76,7 +76,6 @@
     <string name="whatistrue">Čo je pravda?</string>
     <string name="update_git">Musíte mať nainštalovaný Git.</string>
     <string name="update_asap">Aktualizovať ihneď po zverejnení novej verzie.</string>
-    <string name="update_keys">Môžete použiť rovnaké podpisové kľúče.</string>
     <string name="update_neverupdate">Nikdy neaktualizujte, pokiaľ systém funguje dobre.</string>
     <string name="update_askfriend">Požiadajte kamaráta o novú verziu APK.</string>
     <string name="update_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/cs/Installing-AndroidAPS/Update-to-new-version.html</string>
@@ -143,7 +142,6 @@
     <string name="profileswitch_iclower">Hodnota inzulíno-sacharidového pomeru bude o 10 % nižšia.</string>
     <string name="profileswitch_isfhigher">Hodnota citlivosti bude o 10 % vyššia.</string>
     <string name="profileswitch_isflower">Hodnota citlivosti bude o 10 % nižšia.</string>
-    <string name="profileswitch_overall">Celkovo dostanete o 10 % inzulínu menej.</string>
     <string name="profileswitch_targethigher">Cieľ bude o 10 % vyšší.</string>
     <string name="profileswitch_targetlower">Cieľ bude o 10 % nižší.</string>
     <string name="profileswitch_targetbottom">Iba dolný cieľ bude o 10 % nižší.</string>
