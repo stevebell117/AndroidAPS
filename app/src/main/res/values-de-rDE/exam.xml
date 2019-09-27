@@ -65,6 +65,7 @@
     <string name="prerequisites_car">Ein Auto.</string>
     <string name="prerequisites_nightscout">Nightscout zum Erreichen der Objectives (Ziele)</string>
     <string name="prerequisites_tidepoolaccount">Ein Tidepool-Konto.</string>
+    <string name="prerequisites_googleaccount">Ein Google-Konto.</string>
     <string name="prerequisites_githubaccount">Ein Github-Konto.</string>
     <string name="prerequisites_beanandroiddeveloper">Du musst selbst Android-Entwickler sein.</string>
     <string name="prerequisites_own670g">Eine Medtronic 670G Insulinpumpe.</string>
