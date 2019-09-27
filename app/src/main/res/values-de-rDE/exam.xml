@@ -76,6 +76,7 @@
     <string name="whatistrue">Was stimmt?</string>
     <string name="update_git">Du musst Git installieren.</string>
     <string name="update_asap">Updaten, sobald eine neue Version veröffentlicht wurde.</string>
+    <string name="update_keys">Du solltest die gleichen Signaturschlüssel (keys) verwenden.</string>
     <string name="update_neverupdate">Nie updaten, wenn das System stabil läuft.</string>
     <string name="update_askfriend">Frag deine Freunde nach einer neuen APK-Datei.</string>
     <string name="update_hint1">https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Installing-AndroidAPS/Update-to-new-version.html</string>
@@ -142,6 +143,7 @@
     <string name="profileswitch_iclower">liegt der IC-Wert (KH-Faktor) 10% NIEDRIGER.</string>
     <string name="profileswitch_isfhigher">liegt der ISF-Wert (Korrekturfaktor) 10% HÖHER.</string>
     <string name="profileswitch_isflower">wird der ISF-Wert (Korrekturfaktor) 10% NIEDRIGER sein.</string>
+    <string name="profileswitch_overall">Du wirst rund 10% weniger Insulin erhalten.</string>
     <string name="profileswitch_targethigher">wird der Zielwert 10% HÖHER liegen.</string>
     <string name="profileswitch_targetlower">wird der Zielwert 10% NIEDRIGER liegen.</string>
     <string name="profileswitch_targetbottom">wird nur der untere Zielwert 10% NIEDRIGER liegen.</string>
