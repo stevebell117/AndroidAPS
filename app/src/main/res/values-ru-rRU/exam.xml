@@ -76,6 +76,7 @@
     <string name="whatistrue">Что верно?</string>
     <string name="update_git">Вы должны иметь установленный Git.</string>
     <string name="update_asap">Обновлять, как только выходит новая версия.</string>
+    <string name="update_keys">Следует использовать те же ключи подписи.</string>
     <string name="update_neverupdate">Никогда не обновлять, если система работает хорошо.</string>
     <string name="update_askfriend">Попросить новую версию APK у друга.</string>
     <string name="update_hint1">https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Update-to-new-version.html#update-to-a-new-version-or-branch</string>
@@ -144,6 +145,7 @@ Context | Edit Context</string>
     <string name="profileswitch_iclower">Значение IC будет на 10% ниже.</string>
     <string name="profileswitch_isfhigher">Значение ISF будет на 10% выше.</string>
     <string name="profileswitch_isflower">Значение ISF будет на 10% ниже.</string>
+    <string name="profileswitch_overall">В общей сложности вы получите на 10% меньше инсулина.</string>
     <string name="profileswitch_targethigher">Целевое значение ГК будет на 10% выше.</string>
     <string name="profileswitch_targetlower">Целевое значение ГК будет на 10% ниже.</string>
     <string name="profileswitch_targetbottom">Только нижняя цель будет ниже на 10%.</string>
