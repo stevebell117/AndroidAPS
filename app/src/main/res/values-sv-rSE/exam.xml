@@ -76,6 +76,7 @@
     <string name="whatistrue">Vad är sant?</string>
     <string name="update_git">Du måste ha Git installerat.</string>
     <string name="update_asap">Uppdatera så snart den nya versionen har släppts.</string>
+    <string name="update_keys">Du bör använda samma signeringsnycklar.</string>
     <string name="update_neverupdate">Uppdatera aldrig om systemet fungerar bra.</string>
     <string name="update_askfriend">Be din vän om den nya APK-filen.</string>
     <string name="update_hint1">https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Update-to-new-version.html#update-to-a-new-version-or-branch</string>
@@ -113,6 +114,7 @@
     <string name="nsclient_label">Ämne: Övervaka barn</string>
     <string name="nsclient_howcanyou">Hur kan du övervaka AAPS för ditt barn på distans?</string>
     <string name="nsclient_nightscout">Med hjälp av en Nightscout webbplats.</string>
+    <string name="nsclient_dexcomfollow">Appen Dexcom Follow om du använder Dexcoms app (endast BG).</string>
     <string name="nsclient_dexcomfollowxdrip">Dexcom Follow om du använder xDrip på barnets mobil.</string>
     <string name="nsclient_xdripfollower">xDrip i följarläge.</string>
     <string name="nsclient_looponiphone">Appen Loop för iPhone.</string>
@@ -141,6 +143,7 @@
     <string name="profileswitch_iclower">kommer IC-värdet bli 10% lägre.</string>
     <string name="profileswitch_isfhigher">kommer ISF-värdet bli 10% högre.</string>
     <string name="profileswitch_isflower">kommer ISF-värdet bli 10% lägre.</string>
+    <string name="profileswitch_overall">Du kommer att få cirka 10% mindre insulin totalt.</string>
     <string name="profileswitch_targethigher">kommer målet justeras upp med 10%.</string>
     <string name="profileswitch_targetlower">kommer målet justeras ner med 10%.</string>
     <string name="profileswitch_targetbottom">kommer endast den nedre målgränsen bli 10% lägre.</string>
