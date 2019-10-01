@@ -1353,4 +1353,5 @@
     <string name="loading">Načítavanie...</string>
     <string name="snooze">Stíšiť</string>
     <string name="close">Zavrieť</string>
+    <string name="increasingmaxbasal">Zvýšenie maximálnej hodnoty bazálu, pretože nastavenie je nižšie, než je vaša maximálna hodnota bazálu v profile</string>
 </resources>
