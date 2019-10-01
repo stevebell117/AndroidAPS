@@ -1351,4 +1351,5 @@
     <string name="loading">Wczytuję...</string>
     <string name="snooze">Wycisz</string>
     <string name="close">Zamknij</string>
+    <string name="increasingmaxbasal">Zwiększanie maksymalnej wartości bazowej ponieważ ustawienia są poniżej maxymalnej wartości bazy w profilu</string>
 </resources>
