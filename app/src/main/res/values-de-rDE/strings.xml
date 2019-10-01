@@ -1354,4 +1354,5 @@ Unerwartetes Verhalten.</string>
     <string name="loading">Lädt ...</string>
     <string name="snooze">Schlummern</string>
     <string name="close">Schließen</string>
+    <string name="increasingmaxbasal">Der Wert max basal wird erhöht, weil Du ihn niedriger eingestellt hast als die höchste Basalrate in Deinem Profil.</string>
 </resources>
