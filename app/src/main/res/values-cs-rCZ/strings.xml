@@ -1352,6 +1352,9 @@
     <string name="deliverpartofboluswizard">Kalkulátor provede výpočet, ale dodána je pouze tato část inzulínu. Výhodné při používání SMB algoritmu.</string>
     <string name="loading">Načítání…</string>
     <string name="snooze">Ztišit</string>
+    <string name="time_range">Časový rozsah</string>
+    <string name="timerange_value">Čas je mezi %1$s a %2$s</string>
+    <string name="between">Mezi </string>
     <string name="close">Zavřít</string>
     <string name="increasingmaxbasal">Zvýšena hodnota maximálního bazálu, protože nastavení je nižší než Vaše maximální hodnota bazální profilu</string>
 </resources>
