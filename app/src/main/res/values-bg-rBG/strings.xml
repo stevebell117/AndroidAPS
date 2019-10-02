@@ -1352,6 +1352,7 @@
     <string name="deliverpartofboluswizard">Калкулатора изчислява нужния инсулин, но само тази част ще бъде доставена. Полезно със SMB алгоритъма.</string>
     <string name="loading">Зареждане ...</string>
     <string name="snooze">Отложи</string>
+    <string name="between">Между </string>
     <string name="close">Затвори</string>
     <string name="increasingmaxbasal">Повишавам максималната стойност на базал, защото тя е по-ниска от най-високата в базалния профил</string>
 </resources>
