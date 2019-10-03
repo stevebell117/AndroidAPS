@@ -1356,6 +1356,9 @@ Context | Edit Context</string>
     <string name="deliverpartofboluswizard">Мастер болюса выполняет расчет, но подана только эта часть рекомендуемого инсулина. Полезно с алгоритмом SMB.</string>
     <string name="loading">Загрузка...</string>
     <string name="snooze">Отложить</string>
+    <string name="time_range">Диапазон времени</string>
+    <string name="timerange_value">Время между %1$s и %2$s</string>
+    <string name="between">Между </string>
     <string name="close">Закрыть</string>
     <string name="increasingmaxbasal">Повышаю максимальное значение базы т. к. оно меньше, чем максимальное значение в профиле</string>
 </resources>
