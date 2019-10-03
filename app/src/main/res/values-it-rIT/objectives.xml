@@ -51,6 +51,7 @@
     <string name="useaction_hint">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html#config-builder</string>
     <string name="usescale_hint">https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html#the-homescreen</string>
     <string name="notconnected">Non connesso a internet</string>
+    <string name="failedretrievetime">Impossibile recuperare l\'orario</string>
     <string name="requirementnotmet">Requisiti obiettivo non soddisfatti</string>
     <plurals name="objective_days">
         <item quantity="one">%1$d giorno</item>
