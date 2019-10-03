@@ -1345,6 +1345,8 @@ Unerwartetes Verhalten.</string>
     <string name="medtronic_cmd_desc_get_tbr">Hole Temporäre Basalraten</string>
     <string name="medtronic_cmd_desc_set_tbr">Setze Temporäre Basalrate</string>
     <string name="medtronic_cmd_desc_set_bolus">Setze Bolus</string>
+    <string name="profilename">Profil wechseln zu</string>
+    <string name="changengetoprofilename">Profil wechseln zu %1$s</string>
     <string name="insulinFromCob"><![CDATA[COB vs IOB: <font color=\'%1$s\'>%2$+.2fU</font>]]></string>
     <string name="bolusconstraintappliedwarning"><![CDATA[<font color=\'%1$s\'>Bolus-Einschränkung angewendet: %2$.2fIE zu %3$.2fIE</font>]]></string>
     <string name="slowabsorptiondetected"><![CDATA[<font color=\'%1$s\'>!!!!! Langsamer Kohlenhydrat-Abbau erkannt: %2$d%% der Zeit. Überprüfe Deine Berechnung. COB könnte zu hoch sein und deswegen zu viel Insulin abgegeben werden!!!!!</font>]]></string>
@@ -1353,6 +1355,9 @@ Unerwartetes Verhalten.</string>
     <string name="deliverpartofboluswizard">Der Bolus-Assistent führt Berechnungen durch, aber nur dieser Teil der berechneten Insulin wird abgegeben. Nützlich mit SMB-Algorithmus.</string>
     <string name="loading">Lädt ...</string>
     <string name="snooze">Schlummern</string>
+    <string name="time_range">Zeitraum</string>
+    <string name="timerange_value">Für die Zeit zwischen %1$s und %2$s</string>
+    <string name="between">Zwischen </string>
     <string name="close">Schließen</string>
     <string name="increasingmaxbasal">Der Wert max basal wird erhöht, weil Du ihn niedriger eingestellt hast als die höchste Basalrate in Deinem Profil.</string>
 </resources>
