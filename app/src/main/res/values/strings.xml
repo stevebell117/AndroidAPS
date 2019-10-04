@@ -883,12 +883,15 @@
     <string name="ago">ago</string>
     <string name="format_hours">%1$.2f h</string>
     <string name="key_enableSMB_always" translatable="false">enableSMB_always</string>
+    <string name="key_enableSMB_high_bg" translatable="false">enableSMB_high_bg</string>
     <string name="key_enableSMB_with_COB" translatable="false">enableSMB_with_COB</string>
     <string name="key_enableSMB_with_temptarget" translatable="false">enableSMB_with_temptarget</string>
     <string name="key_enableSMB_after_carbs" translatable="false">enableSMB_after_carbs</string>
     <string name="key_allowSMB_with_high_temptarget" translatable="false">enableSMB_with_high_temptarget</string>
     <string name="enablesmbalways">Enable SMB always</string>
     <string name="enablesmbalways_summary">Enable SMB always independently to boluses. Possible only with BG source with nice filtering of data like G5</string>
+    <string name="enablesmbhighbg">Enable SMB High BG</string>
+    <string name="enablesmbhighbg_summary">Enable SMB when BG is higher than the High value on the active profile. It will also enable SMB if higher than a single-value temp target.</string>
     <string name="enablesmbaftercarbs">Enable SMB after carbs</string>
     <string name="enablesmbaftercarbs_summary">Enable SMB for 6h after carbs, even with 0 COB. Possible only with BG source with nice filtering of data like G5</string>
     <string name="enablesmbwithcob">Enable SMB with COB</string>

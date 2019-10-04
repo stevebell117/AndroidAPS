@@ -61,6 +61,13 @@
         <SwitchPreference
             android:defaultValue="false"
             android:dependency="@string/key_use_smb"
+            android:key="@string/key_enableSMB_high_bg"
+            android:summary="@string/enablesmbhighbg_summary"
+            android:title="@string/enablesmbhighbg" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="@string/key_use_smb"
             android:key="@string/key_enableSMB_after_carbs"
             android:summary="@string/enablesmbaftercarbs_summary"
             android:title="@string/enablesmbaftercarbs" />
