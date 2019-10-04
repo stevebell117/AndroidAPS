@@ -401,7 +401,7 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
             if (profile.A52_risk_enable === true) {
                 if (high_bg !== null) {
                     console.error("Current BG ${bg} | High BG ${high_bg}");
-                    if (bg >= adjustedMaxBG) {
+                    if (bg >= high_bg) {
                         enableSMB=true;
                         console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
                     }
