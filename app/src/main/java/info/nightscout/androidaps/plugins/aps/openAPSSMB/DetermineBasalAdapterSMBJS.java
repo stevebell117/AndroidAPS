@@ -230,6 +230,7 @@ public class DetermineBasalAdapterSMBJS {
         mProfile.put("max_basal", maxBasal);
         mProfile.put("min_bg", minBg);
         mProfile.put("max_bg", maxBg);
+        mProfile.put("high_bg", profile.getHighBG())
         mProfile.put("target_bg", targetBg);
         mProfile.put("carb_ratio", profile.getIc());
         mProfile.put("sens", Profile.toMgdl(profile.getIsf(), units));
@@ -265,6 +266,7 @@ public class DetermineBasalAdapterSMBJS {
         mProfile.put("enableSMB_with_temptarget", smbEnabled && SP.getBoolean(R.string.key_enableSMB_with_temptarget, false));
         mProfile.put("allowSMB_with_high_temptarget", smbEnabled && SP.getBoolean(R.string.key_allowSMB_with_high_temptarget, false));
         mProfile.put("enableSMB_always", smbEnabled && SP.getBoolean(R.string.key_enableSMB_always, false) && advancedFiltering);
+        mProfile.put("enableSMB_high_bg", smbEnabled && SP.getBoolean(R.string.key_enableSMB_high_bg, false));
         mProfile.put("enableSMB_after_carbs", smbEnabled && SP.getBoolean(R.string.key_enableSMB_after_carbs, false) && advancedFiltering);
         mProfile.put("maxSMBBasalMinutes", SP.getInt(R.string.key_smbmaxminutes, SMBDefaults.maxSMBBasalMinutes));
         mProfile.put("carbsReqThreshold", SMBDefaults.carbsReqThreshold);

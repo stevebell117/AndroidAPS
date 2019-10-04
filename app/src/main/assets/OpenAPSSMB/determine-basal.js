@@ -100,11 +100,15 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
     var target_bg;
     var min_bg;
     var max_bg;
+    var high_bg;
     if (typeof profile.min_bg !== 'undefined') {
             min_bg = profile.min_bg;
     }
     if (typeof profile.max_bg !== 'undefined') {
             max_bg = profile.max_bg;
+    }
+    if (typeof profile.high_bg !== 'undefined') {
+        high_bg = profile.high_bg;
     }
     if (typeof profile.min_bg !== 'undefined' && typeof profile.max_bg !== 'undefined') {
         target_bg = (profile.min_bg + profile.max_bg) / 2;
@@ -390,51 +394,33 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
             console.error("SMB enabled for temptarget of",convert_bg(target_bg, profile));
             enableSMB=true;
         }
-    // enable SMB if high bg is found
     } else if (profile.enableSMB_high_bg === true) {
+        // enable SMB if high bg is found
         console.error("Checking BG to see if High for SMB enablement.");
         if (meal_data.bwFound) {
             if (profile.A52_risk_enable === true) {
-                // Use the adjusted Max based on work done above
-                if (typeof adjustedMaxBG !== 'undefined') {
-                    console.error("Current BG ${bg} | Adjusted BG ${adjustedMaxBG}")
+                if (high_bg !== null) {
+                    console.error("Current BG ${bg} | High BG ${high_bg}");
                     if (bg >= adjustedMaxBG) {
                         enableSMB=true;
-                    }
-                // Use the original max_bg
-                } else if (typeof profile.max_bg !== 'undefined') {
-                    console.error("Current BG ${bg} | Profile Max BG ${profile.max_bg}")
-                    if (bg >= profile.max_bg) {
-                        enableSMB=true;
+                        console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
                     }
                 } else {
-                    console.error("No max bg target set. Can't enable SMB due to not knowing definition of a high bg.");
-                }
-                if (enableSMB === true) {
-                    console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard")
+                    console.error("No high_bg set. Unable to determine if high bg.");
                 }
             } else {
                 console.error("enableSMB_high_bg not supported within 6h of using Bolus Wizard");
             }
         } else {
-            // Use the adjusted MaxBG based on work done above
-            if (typeof adjustedMaxBG !== 'undefined') {
-                console.error("Current BG ${bg} | Adjusted BG ${adjustedMaxBG}")
-                if (bg >= adjustedMaxBG) {
+            if (high_bg !== null) {
+                console.error("Current BG ${bg} | High BG ${high_bg}");
+                if (bg >= high_bg) {
                     enableSMB=true;
-                }
-            // Use the original max_bg
-            } else if (typeof profile.max_bg !== 'undefined') {
-                console.error("Current BG ${bg} | Profile Max BG ${profile.max_bg}")
-                if (bg >= profile.max_bg) {
-                    enableSMB=true;
+                    console.error("High BG detected. Enabling SMB.");
                 }
             } else {
-                console.error("No max bg target set. Can't enable SMB due to not knowing definition of a high bg.");
+                console.error("No high_bg set. Unable to determine if high bg.");
             }
-        }
-        if (enableSMB === true) {
-            console.error("High BG detected. Enabling SMB.");
         }
     // enable SMB/UAM if always-on (unless previously disabled for high temptarget)
     } else if (profile.enableSMB_always === true) {
