@@ -48,6 +48,83 @@ function convert_bg(value, profile)
     }
 }
 
+var enable_smb = function enable_smb(
+    profile,
+    microBolusAllowed,
+    meal_data,
+    bg,
+    target_bg,
+    high_bg
+) {
+    // disable SMB when a high temptarget is set
+    if (! microBolusAllowed) {
+        console.error("SMB disabled (!microBolusAllowed)")
+        return false;
+    } else if (! profile.allowSMB_with_high_temptarget && profile.temptargetSet && target_bg > 100) {
+        console.error("SMB disabled due to high temptarget of",target_bg);
+        return false;
+    } else if (meal_data.bwFound === true && profile.A52_risk_enable === false) {
+        console.error("SMB disabled due to Bolus Wizard activity in the last 6 hours.");
+        return false;
+    }
+
+    // enable SMB/UAM if always-on (unless previously disabled for high temptarget)
+    if (profile.enableSMB_always === true) {
+        if (meal_data.bwFound) {
+            console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
+        } else {
+            console.error("SMB enabled due to enableSMB_always");
+        }
+        return true;
+    }
+
+    // enable SMB/UAM (if enabled in preferences) while we have COB
+    if (profile.enableSMB_with_COB === true && meal_data.mealCOB) {
+        if (meal_data.bwCarbs) {
+            console.error("Warning: SMB enabled with Bolus Wizard carbs: be sure to easy bolus 30s before using Bolus Wizard");
+        } else {
+            console.error("SMB enabled for COB of",meal_data.mealCOB);
+        }
+        return true;
+    } 
+    
+    // enable SMB/UAM (if enabled in preferences) for a full 6 hours after any carb entry
+    // (6 hours is defined in carbWindow in lib/meal/total.js)
+    if (profile.enableSMB_after_carbs === true && meal_data.carbs ) {
+        if (meal_data.bwCarbs) {
+            console.error("Warning: SMB enabled with Bolus Wizard carbs: be sure to easy bolus 30s before using Bolus Wizard")
+        } else {
+            console.error("SMB enabled for 6h after carb entry");
+        }
+        return true;
+    }
+    
+    // enable SMB/UAM (if enabled in preferences) if a low temptarget is set
+    if (profile.enableSMB_with_temptarget === true && (profile.temptargetSet && target_bg < 100)) {
+        if (meal_data.bwFound) {
+            console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard")
+        } else {
+            console.error("SMB enabled for temptarget of",convert_bg(target_bg, profile));
+        }
+        return true;
+    } 
+    
+    // enable SMB if high bg is found
+    if (profile.enableSMB_high_bg === true && high_bg !== null && bg >= high_bg) {
+        console.error("Checking BG to see if High for SMB enablement.");
+        console.error("Current BG", bg, " | High BG ", high_bg);
+        if (meal_data.bwFound) {
+            console.error("Warning: High BG SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
+        } else {
+            console.error("High BG detected. Enabling SMB.");
+        }
+        return true;
+    }
+    
+    console.error("SMB disabled (no enableSMB preferences active)");
+    return false;
+}
+
 var determine_basal = function determine_basal(glucose_status, currenttemp, iob_data, profile, autosens_data, meal_data, tempBasalFunctions, microBolusAllowed, reservoir_data) {
     var rT = {}; //short for requestedTemp
 
@@ -345,99 +422,15 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
     ZTpredBGs.push(bg);
     UAMpredBGs.push(bg);
 
-    // enable SMB whenever we have COB or UAM is enabled
-    // SMB is disabled by default, unless explicitly enabled in preferences.json
-    var enableSMB=false;
-    // disable SMB when a high temptarget is set
-    if (! microBolusAllowed) {
-        console.error("SMB disabled (!microBolusAllowed)")
-    } else if (! profile.allowSMB_with_high_temptarget && profile.temptargetSet && target_bg > 100) {
-        console.error("SMB disabled due to high temptarget of",target_bg);
-        enableSMB=false;
-    // enable SMB/UAM (if enabled in preferences) while we have COB
-    } else if (profile.enableSMB_with_COB === true && meal_data.mealCOB) {
-        if (meal_data.bwCarbs) {
-            if (profile.A52_risk_enable) {
-                console.error("Warning: SMB enabled with Bolus Wizard carbs: be sure to easy bolus 30s before using Bolus Wizard")
-                enableSMB=true;
-            } else {
-                console.error("SMB not enabled for Bolus Wizard COB");
-            }
-        } else {
-            console.error("SMB enabled for COB of",meal_data.mealCOB);
-            enableSMB=true;
-        }
-    // enable SMB/UAM (if enabled in preferences) for a full 6 hours after any carb entry
-    // (6 hours is defined in carbWindow in lib/meal/total.js)
-    } else if (profile.enableSMB_after_carbs === true && meal_data.carbs ) {
-        if (meal_data.bwCarbs) {
-            if (profile.A52_risk_enable) {
-            console.error("Warning: SMB enabled with Bolus Wizard carbs: be sure to easy bolus 30s before using Bolus Wizard")
-            enableSMB=true;
-            } else {
-                console.error("SMB not enabled for Bolus Wizard carbs");
-            }
-        } else {
-            console.error("SMB enabled for 6h after carb entry");
-            enableSMB=true;
-        }
-    // enable SMB/UAM (if enabled in preferences) if a low temptarget is set
-    } else if (profile.enableSMB_with_temptarget === true && (profile.temptargetSet && target_bg < 100)) {
-        if (meal_data.bwFound) {
-            if (profile.A52_risk_enable) {
-                console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard")
-                enableSMB=true;
-            } else {
-                console.error("enableSMB_with_temptarget not supported within 6h of using Bolus Wizard");
-            }
-        } else {
-            console.error("SMB enabled for temptarget of",convert_bg(target_bg, profile));
-            enableSMB=true;
-        }
-    } else if (profile.enableSMB_high_bg === true) {
-        // enable SMB if high bg is found
-        console.error("Checking BG to see if High for SMB enablement.");
-        if (meal_data.bwFound) {
-            if (profile.A52_risk_enable === true) {
-                if (high_bg !== null) {
-                    console.error("Current BG", bg, " | High BG ", high_bg);
-                    if (bg >= high_bg) {
-                        enableSMB=true;
-                        console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
-                    }
-                } else {
-                    console.error("No high_bg set. Unable to determine if high bg.");
-                }
-            } else {
-                console.error("enableSMB_high_bg not supported within 6h of using Bolus Wizard");
-            }
-        } else {
-            if (high_bg !== null) {
-                console.error("Current BG", bg, " | High BG ", high_bg);
-                if (bg >= high_bg) {
-                    enableSMB=true;
-                    console.error("High BG detected. Enabling SMB.");
-                }
-            } else {
-                console.error("No high_bg set. Unable to determine if high bg.");
-            }
-        }
-    // enable SMB/UAM if always-on (unless previously disabled for high temptarget)
-    } else if (profile.enableSMB_always === true) {
-        if (meal_data.bwFound) {
-            if (profile.A52_risk_enable === true) {
-                console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard")
-                enableSMB=true;
-            } else {
-                console.error("enableSMB_always not supported within 6h of using Bolus Wizard");
-            }
-        } else {
-            console.error("SMB enabled due to enableSMB_always");
-            enableSMB=true;
-        }
-    } else {
-        console.error("SMB disabled (no enableSMB preferences active)");
-    }
+    enableSMB = enable_smb(
+        profile,
+        microBolusAllowed,
+        meal_data,
+        bg,
+        target_bg,
+        high_bg
+    );
+
     // enable UAM (if enabled in preferences)
     var enableUAM=(profile.enableUAM);
 
