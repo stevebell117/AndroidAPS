@@ -400,7 +400,7 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
         if (meal_data.bwFound) {
             if (profile.A52_risk_enable === true) {
                 if (high_bg !== null) {
-                    console.error("Current BG ${bg} | High BG ${high_bg}");
+                    console.error("Current BG", bg, " | High BG ", high_bg);
                     if (bg >= high_bg) {
                         enableSMB=true;
                         console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
@@ -413,7 +413,7 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
             }
         } else {
             if (high_bg !== null) {
-                console.error("Current BG ${bg} | High BG ${high_bg}");
+                console.error("Current BG", bg, " | High BG ", high_bg);
                 if (bg >= high_bg) {
                     enableSMB=true;
                     console.error("High BG detected. Enabling SMB.");
