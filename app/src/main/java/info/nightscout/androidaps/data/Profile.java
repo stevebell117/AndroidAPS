@@ -43,7 +43,6 @@ public class Profile {
     private LongSparseArray<Double> targetLow_v; // oldest at index 0
     private JSONArray targetHigh;
     private LongSparseArray<Double> targetHigh_v; // oldest at index 0
-    private double highBG;
 
     private int percentage;
     private int timeshift;
@@ -89,7 +88,6 @@ public class Profile {
         basal_v = null;
         targetLow_v = null;
         targetHigh_v = null;
-        highBG = 160;
 
         isValid = true;
         isValidated = false;
@@ -111,8 +109,6 @@ public class Profile {
             basal = json.getJSONArray("basal");
             targetLow = json.getJSONArray("target_low");
             targetHigh = json.getJSONArray("target_high");
-            //TODO: have this configurable
-            //highBG = json.getJSONArray("high_bg");
         } catch (JSONException e) {
             log.error("Unhandled exception", e);
             isValid = false;
@@ -533,14 +529,6 @@ public class Profile {
         if (targetHigh_v == null)
             targetHigh_v = convertToSparseArray(targetHigh);
         return getValueToTime(targetHigh_v, timeAsSeconds);
-    }
-
-    public double getHighBG() {
-        return highBG;
-    }
-
-    public void setHighBG(double override) {
-        highBG = override;
     }
 
     public class TargetValue {
