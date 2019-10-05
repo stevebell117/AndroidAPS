@@ -58,7 +58,7 @@ var enable_smb = function enable_smb(
 ) {
     // disable SMB when a high temptarget is set
     if (! microBolusAllowed) {
-        console.error("SMB disabled (!microBolusAllowed)")
+        console.error("SMB disabled (!microBolusAllowed)");
         return false;
     } else if (! profile.allowSMB_with_high_temptarget && profile.temptargetSet && target_bg > 100) {
         console.error("SMB disabled due to high temptarget of",target_bg);
@@ -92,7 +92,7 @@ var enable_smb = function enable_smb(
     // (6 hours is defined in carbWindow in lib/meal/total.js)
     if (profile.enableSMB_after_carbs === true && meal_data.carbs ) {
         if (meal_data.bwCarbs) {
-            console.error("Warning: SMB enabled with Bolus Wizard carbs: be sure to easy bolus 30s before using Bolus Wizard")
+            console.error("Warning: SMB enabled with Bolus Wizard carbs: be sure to easy bolus 30s before using Bolus Wizard");
         } else {
             console.error("SMB enabled for 6h after carb entry");
         }
@@ -102,7 +102,7 @@ var enable_smb = function enable_smb(
     // enable SMB/UAM (if enabled in preferences) if a low temptarget is set
     if (profile.enableSMB_with_temptarget === true && (profile.temptargetSet && target_bg < 100)) {
         if (meal_data.bwFound) {
-            console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard")
+            console.error("Warning: SMB enabled within 6h of using Bolus Wizard: be sure to easy bolus 30s before using Bolus Wizard");
         } else {
             console.error("SMB enabled for temptarget of",convert_bg(target_bg, profile));
         }
@@ -121,7 +121,7 @@ var enable_smb = function enable_smb(
         return true;
     }
     
-    console.error("SMB disabled (no enableSMB preferences active)");
+    console.error("SMB disabled (no enableSMB preferences active or no condition satisfied)");
     return false;
 }
 
