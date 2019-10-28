@@ -48,7 +48,7 @@ function convert_bg(value, profile)
     }
 }
 
-var enable_smb = function enable_smb(
+function enable_smb(
     profile,
     microBolusAllowed,
     meal_data,
@@ -422,7 +422,7 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
     ZTpredBGs.push(bg);
     UAMpredBGs.push(bg);
 
-    enableSMB = enable_smb(
+    var enableSMB = enable_smb(
         profile,
         microBolusAllowed,
         meal_data,

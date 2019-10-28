@@ -329,7 +329,11 @@ public abstract class PumpPluginAbstract extends PluginBase implements PumpInter
         JSONObject status = new JSONObject();
         JSONObject extended = new JSONObject();
         try {
-            battery.put("percent", pumpStatus.batteryRemaining);
+            if (pumpStatus.batteryVoltage != null) {
+                battery.put("voltage", pumpStatus.batteryVoltage);
+            } else {
+                battery.put("percent", pumpStatus.batteryRemaining);
+            }
             status.put("status", pumpStatus.pumpStatusType != null ? pumpStatus.pumpStatusType.getStatus() : "normal");
             extended.put("Version", BuildConfig.VERSION_NAME + "-" + BuildConfig.BUILDVERSION);
             try {
@@ -395,7 +399,7 @@ public abstract class PumpPluginAbstract extends PluginBase implements PumpInter
         // }
         ret += "IOB: " + pumpStatus.iob + "U\n";
         ret += "Reserv: " + DecimalFormatter.to0Decimal(pumpStatus.reservoirRemainingUnits) + "U\n";
-        ret += "Batt: " + pumpStatus.batteryRemaining + "\n";
+        ret += "Batt: " + pumpStatus.batteryVoltage + "\n";
         return ret;
     }
 

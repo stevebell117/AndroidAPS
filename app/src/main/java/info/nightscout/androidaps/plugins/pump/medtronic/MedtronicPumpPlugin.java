@@ -698,6 +698,10 @@ public class MedtronicPumpPlugin extends PumpPluginAbstract implements PumpInter
         return getMDTPumpStatus().batteryRemaining;
     }
 
+    public double getBatteryVoltage() {
+        return getMDTPumpStatus().batteryVoltage;
+    }
+
 
     private MedtronicPumpStatus getMDTPumpStatus() {
         if (pumpStatusLocal == null) {

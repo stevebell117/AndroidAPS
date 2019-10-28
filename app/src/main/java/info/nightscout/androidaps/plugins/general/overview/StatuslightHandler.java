@@ -34,7 +34,7 @@ class StatuslightHandler {
 
         applyStatuslight("sage", CareportalEvent.SENSORCHANGE, sageView, "SEN", 164, 166);
 
-        double batteryLevel = pump.isInitialized() ? pump.getBatteryLevel() : -1;
+        double batteryLevel = pump.isInitialized() ? pump.getBatteryVoltage() : -1;
         applyStatuslightLevel(R.string.key_statuslights_bat_critical, 5.0,
                 R.string.key_statuslights_bat_warning, 22.0,
                 batteryView, "BAT", batteryLevel);
