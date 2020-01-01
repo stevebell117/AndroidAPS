@@ -229,7 +229,7 @@ public class DetermineBasalAdapterSMBJS {
         mProfile.put("max_basal", maxBasal);
         mProfile.put("min_bg", minBg);
         mProfile.put("max_bg", maxBg);
-        mProfile.put("high_bg", profile.getTargetHigh());
+        mProfile.put("high_bg", profile.getTargetHighMgdl());
         mProfile.put("target_bg", targetBg);
         mProfile.put("carb_ratio", profile.getIc());
         mProfile.put("sens", profile.getIsfMgdl());
