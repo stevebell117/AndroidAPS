@@ -465,44 +465,44 @@
         </activity>
         <activity
             android:name=".interaction.AAPSPreferences"
-            android:label="@string/menu_settings">
+            android:label="SETTINGS">
         </activity>
         <activity
             android:name=".interaction.actions.WizardActivity"
-            android:label="@string/menu_wizard">
+            android:label="Wizard">
         </activity>
         <activity
             android:name=".interaction.menus.FillMenuActivity"
-            android:label="@string/menu_prime_fill">
+            android:label="Fillmenu">
         </activity>
         <activity
             android:name=".interaction.menus.StatusMenuActivity"
-            android:label="@string/menu_status">
+            android:label="Status">
         </activity>
         <activity
             android:name=".interaction.actions.BolusActivity"
-            android:label="@string/action_bolus">
+            android:label="Bolus">
         </activity>
         <activity
             android:name=".interaction.actions.CPPActivity"
-            android:label="@string/status_cpp">
+            android:label="CPP">
         </activity>
         <activity
             android:name=".interaction.actions.AcceptActivity"
             android:launchMode="singleInstance"
-            android:label="@string/action_confirm">
+            android:label="ACCEPT">
         </activity>
         <activity
             android:name=".interaction.actions.FillActivity"
-            android:label="@string/menu_prime_fill">
+            android:label="Fill">
         </activity>
         <activity
             android:name=".interaction.actions.ECarbActivity"
-            android:label="@string/action_carbs">
+            android:label="Fill">
         </activity>
         <activity
             android:name=".interaction.actions.TempTargetActivity"
-            android:label="@string/menu_tempt">
+            android:label="TempTarget">
         </activity>
     </application>
 </manifest>
