@@ -20,6 +20,8 @@ import info.nightscout.androidaps.utils.*
 import kotlinx.android.synthetic.main.dialog_fill.*
 import kotlinx.android.synthetic.main.notes.*
 import kotlinx.android.synthetic.main.okcancel.*
+import org.json.JSONException
+import org.json.JSONObject
 import java.util.*
 import kotlin.math.abs
 
@@ -91,6 +93,8 @@ class FillDialog : DialogFragmentWithDate() {
         val notes = notes.text.toString()
         if (notes.isNotEmpty())
             actions.add(MainApp.gs(R.string.careportal_newnstreatment_notes_label) + ": " + notes)
+        eventTime -= eventTime % 1000
+
         if (eventTimeChanged)
             actions.add(MainApp.gs(R.string.time) + ": " + DateUtil.dateAndTimeString(eventTime))
 
@@ -98,27 +102,18 @@ class FillDialog : DialogFragmentWithDate() {
             activity?.let { activity ->
                 OKDialog.showConfirmation(activity, MainApp.gs(R.string.primefill), HtmlHelper.fromHtml(Joiner.on("<br/>").join(actions)), Runnable {
                     if (insulinAfterConstraints > 0) {
-                        val detailedBolusInfo = DetailedBolusInfo()
-                        detailedBolusInfo.insulin = insulinAfterConstraints
-                        detailedBolusInfo.context = context
-                        detailedBolusInfo.source = Source.USER
-                        detailedBolusInfo.isValid = false // do not count it in IOB (for pump history)
-                        detailedBolusInfo.notes = notes
-                        ConfigBuilderPlugin.getPlugin().commandQueue.bolus(detailedBolusInfo, object : Callback() {
-                            override fun run() {
-                                if (!result.success) {
-                                    val i = Intent(MainApp.instance(), ErrorHelperActivity::class.java)
-                                    i.putExtra("soundid", R.raw.boluserror)
-                                    i.putExtra("status", result.comment)
-                                    i.putExtra("title", MainApp.gs(R.string.treatmentdeliveryerror))
-                                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                                    MainApp.instance().startActivity(i)
-                                }
-                            }
-                        })
+                        log.debug("USER ENTRY: PRIME BOLUS $insulinAfterConstraints")
+                        requestPrimeBolus(insulinAfterConstraints, notes)
                     }
-                    if (siteChange) NSUpload.uploadEvent(CareportalEvent.SITECHANGE, eventTime, notes)
-                    if (insulinChange) NSUpload.uploadEvent(CareportalEvent.INSULINCHANGE, eventTime + 1000, notes)
+                    if (siteChange) {
+                        log.debug("USER ENTRY: SITE CHANGE")
+                        generateCareportalEvent(CareportalEvent.SITECHANGE, eventTime, notes)
+                    }
+                    if (insulinChange) {
+                        // add a second for case of both checked
+                        log.debug("USER ENTRY: INSULIN CHANGE")
+                        generateCareportalEvent(CareportalEvent.INSULINCHANGE, eventTime + 1000, notes)
+                    }
                 }, null)
             }
         } else {
@@ -129,4 +124,49 @@ class FillDialog : DialogFragmentWithDate() {
         dismiss()
         return true
     }
+
+    private fun requestPrimeBolus(insulin: Double, notes: String) {
+        val detailedBolusInfo = DetailedBolusInfo()
+        detailedBolusInfo.insulin = insulin
+        detailedBolusInfo.context = context
+        detailedBolusInfo.source = Source.USER
+        detailedBolusInfo.isValid = false // do not count it in IOB (for pump history)
+        detailedBolusInfo.notes = notes
+        ConfigBuilderPlugin.getPlugin().commandQueue.bolus(detailedBolusInfo, object : Callback() {
+            override fun run() {
+                if (!result.success) {
+                    val i = Intent(MainApp.instance(), ErrorHelperActivity::class.java)
+                    i.putExtra("soundid", R.raw.boluserror)
+                    i.putExtra("status", result.comment)
+                    i.putExtra("title", MainApp.gs(R.string.treatmentdeliveryerror))
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    MainApp.instance().startActivity(i)
+                }
+            }
+        })
+    }
+
+    private fun generateCareportalEvent(eventType: String, time: Long, notes: String) {
+        val careportalEvent = CareportalEvent()
+        careportalEvent.source = Source.USER
+        careportalEvent.date = time
+        careportalEvent.json = generateJson(eventType, time, notes).toString()
+        careportalEvent.eventType = eventType
+        MainApp.getDbHelper().createOrUpdate(careportalEvent)
+        NSUpload.uploadEvent(eventType, time, notes)
+    }
+
+    private fun generateJson(careportalEvent: String, time: Long, notes: String): JSONObject {
+        val data = JSONObject()
+        try {
+            data.put("eventType", careportalEvent)
+            data.put("created_at", DateUtil.toISOString(time))
+            data.put("mills", time)
+            data.put("enteredBy", SP.getString("careportal_enteredby", MainApp.gs(R.string.app_name)))
+            if (notes.isNotEmpty()) data.put("notes", notes)
+        } catch (ignored: JSONException) {
+        }
+        return data
+    }
+
 }
