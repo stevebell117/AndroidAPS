@@ -199,9 +199,6 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
     if (typeof profile.max_bg !== 'undefined') {
             max_bg = profile.max_bg;
     }
-    if (typeof profile.high_bg !== 'undefined') {
-        high_bg = profile.high_bg;
-    }
     if (typeof profile.min_bg !== 'undefined' && typeof profile.max_bg !== 'undefined') {
         target_bg = (profile.min_bg + profile.max_bg) / 2;
     } else {
@@ -415,6 +412,10 @@ var determine_basal = function determine_basal(glucose_status, currenttemp, iob_
 
     // min_bg of 90 -> threshold of 65, 100 -> 70 110 -> 75, and 130 -> 85
     var threshold = min_bg - 0.5*(min_bg-40);
+
+    if (typeof profile.high_bg !== 'undefined') {
+        high_bg = Math.max(profile.high_bg, min_bg);
+    }
 
     //console.error(reservoir_data);
 
