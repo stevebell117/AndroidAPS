@@ -471,7 +471,8 @@
         app:layout_constraintBottom_toTopOf="@id/overview_buttons_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/overview_toppart" />
+        app:layout_constraintTop_toBottomOf="@id/overview_toppart"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/overview_buttons_layout"
