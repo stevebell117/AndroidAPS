@@ -223,6 +223,7 @@ public class OverviewFragment extends Fragment implements View.OnClickListener, 
             shorttextmode = true;
         } else if (smallHeight || landscape) {
             view = inflater.inflate(R.layout.overview_fragment_smallheight, container, false);
+            //view = inflater.inflate(R.layout.overview_fragment_landscape, container, false);
         } else {
             view = inflater.inflate(R.layout.overview_fragment, container, false);
         }
