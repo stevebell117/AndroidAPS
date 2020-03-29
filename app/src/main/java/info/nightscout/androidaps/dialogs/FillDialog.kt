@@ -105,6 +105,9 @@ class FillDialog : DialogFragmentWithDate() {
                         log.debug("USER ENTRY: PRIME BOLUS $insulinAfterConstraints")
                         requestPrimeBolus(insulinAfterConstraints, notes)
                     }
+                    val careportalEvent = CareportalEvent()
+                    careportalEvent.date  = eventTime
+                    careportalEvent.source = Source.USER
                     if (siteChange) {
                         log.debug("USER ENTRY: SITE CHANGE")
                         generateCareportalEvent(CareportalEvent.SITECHANGE, eventTime, notes)
@@ -114,6 +117,7 @@ class FillDialog : DialogFragmentWithDate() {
                         log.debug("USER ENTRY: INSULIN CHANGE")
                         generateCareportalEvent(CareportalEvent.INSULINCHANGE, eventTime + 1000, notes)
                     }
+                    MainApp.getDbHelper().createOrUpdate(careportalEvent)
                 }, null)
             }
         } else {
@@ -125,38 +129,7 @@ class FillDialog : DialogFragmentWithDate() {
         return true
     }
 
-    private fun requestPrimeBolus(insulin: Double, notes: String) {
-        val detailedBolusInfo = DetailedBolusInfo()
-        detailedBolusInfo.insulin = insulin
-        detailedBolusInfo.context = context
-        detailedBolusInfo.source = Source.USER
-        detailedBolusInfo.isValid = false // do not count it in IOB (for pump history)
-        detailedBolusInfo.notes = notes
-        ConfigBuilderPlugin.getPlugin().commandQueue.bolus(detailedBolusInfo, object : Callback() {
-            override fun run() {
-                if (!result.success) {
-                    val i = Intent(MainApp.instance(), ErrorHelperActivity::class.java)
-                    i.putExtra("soundid", R.raw.boluserror)
-                    i.putExtra("status", result.comment)
-                    i.putExtra("title", MainApp.gs(R.string.treatmentdeliveryerror))
-                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    MainApp.instance().startActivity(i)
-                }
-            }
-        })
-    }
-
-    private fun generateCareportalEvent(eventType: String, time: Long, notes: String) {
-        val careportalEvent = CareportalEvent()
-        careportalEvent.source = Source.USER
-        careportalEvent.date = time
-        careportalEvent.json = generateJson(eventType, time, notes).toString()
-        careportalEvent.eventType = eventType
-        MainApp.getDbHelper().createOrUpdate(careportalEvent)
-        NSUpload.uploadEvent(eventType, time, notes)
-    }
-
-    private fun generateJson(careportalEvent: String, time: Long, notes: String): JSONObject {
+    fun generateJson(careportalEvent: String, time: Long, notes: String): JSONObject {
         val data = JSONObject()
         try {
             data.put("eventType", careportalEvent)
