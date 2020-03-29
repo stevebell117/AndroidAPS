@@ -221,7 +221,7 @@ public class TreatmentsBolusFragment extends Fragment {
             });
         });
 
-        boolean nsUploadOnly = SP.getBoolean(R.string.key_ns_upload_only, true);
+        boolean nsUploadOnly = SP.getBoolean(R.string.key_ns_upload_only, false);
         if (nsUploadOnly)
             refreshFromNS.setVisibility(View.GONE);
 

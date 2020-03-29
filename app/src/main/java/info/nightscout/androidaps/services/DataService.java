@@ -54,7 +54,7 @@ public class DataService extends IntentService {
             log.debug("onHandleIntent " + BundleLogger.log(intent.getExtras()));
         }
 
-        boolean acceptNSData = !SP.getBoolean(R.string.key_ns_upload_only, true);
+        boolean acceptNSData = !SP.getBoolean(R.string.key_ns_upload_only, false);
         Bundle bundles = intent.getExtras();
 
         final String action = intent.getAction();

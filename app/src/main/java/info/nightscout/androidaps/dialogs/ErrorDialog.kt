@@ -36,7 +36,6 @@ class ErrorDialog : DialogFragment() {
             bundle.getString("title")?.let { title = it }
             sound = bundle.getInt("sound", R.raw.error)
         }
-        log.debug("Error dialog displayed")
         return inflater.inflate(R.layout.dialog_error, container, false)
     }
 
@@ -45,11 +44,11 @@ class ErrorDialog : DialogFragment() {
 
         error_title.text = title
         overview_error_ok.setOnClickListener {
-            log.debug("USER ENTRY: Error dialog ok button pressed")
+            log.debug("Error dialog ok button pressed")
             dismiss()
         }
         overview_error_mute.setOnClickListener {
-            log.debug("USER ENTRY: Error dialog mute button pressed")
+            log.debug("Error dialog mute button pressed")
             stopAlarm()
         }
         startAlarm()

@@ -79,7 +79,6 @@ public class ActionLoopSuspendTest {
     public void prepareTest() {
         AAPSMocker.mockMainApp();
         AAPSMocker.mockApplicationContext();
-        AAPSMocker.mockDatabaseHelper();
         AAPSMocker.mockStrings();
         AAPSMocker.mockSP();
         AAPSMocker.mockConfigBuilder();

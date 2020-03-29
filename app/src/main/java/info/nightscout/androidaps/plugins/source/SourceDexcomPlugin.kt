@@ -9,8 +9,6 @@ import info.nightscout.androidaps.R
 import info.nightscout.androidaps.activities.RequestDexcomPermissionActivity
 import info.nightscout.androidaps.db.BgReading
 import info.nightscout.androidaps.db.CareportalEvent
-import info.nightscout.androidaps.db.Source
-import info.nightscout.androidaps.dialogs.CareDialog
 import info.nightscout.androidaps.interfaces.BgSourceInterface
 import info.nightscout.androidaps.interfaces.PluginBase
 import info.nightscout.androidaps.interfaces.PluginDescription
@@ -98,13 +96,6 @@ object SourceDexcomPlugin : PluginBase(PluginDescription()
                             jsonObject.put("glucoseType", "Finger")
                             jsonObject.put("glucose", meter.getInt("meterValue"))
                             jsonObject.put("units", Constants.MGDL)
-
-                            val careportalEvent = CareportalEvent()
-                            careportalEvent.date = timestamp
-                            careportalEvent.source = Source.USER
-                            careportalEvent.eventType = CareportalEvent.BGCHECK
-                            careportalEvent.json = jsonObject.toString()
-                            MainApp.getDbHelper().createOrUpdate(careportalEvent)
                             NSUpload.uploadCareportalEntryToNS(jsonObject)
                         }
                 }
@@ -119,12 +110,6 @@ object SourceDexcomPlugin : PluginBase(PluginDescription()
                             jsonObject.put("enteredBy", "AndroidAPS-Dexcom$sensorType")
                             jsonObject.put("created_at", DateUtil.toISOString(sensorInsertionTime))
                             jsonObject.put("eventType", CareportalEvent.SENSORCHANGE)
-                            val careportalEvent = CareportalEvent()
-                            careportalEvent.date = sensorInsertionTime
-                            careportalEvent.source = Source.USER
-                            careportalEvent.eventType = CareportalEvent.SENSORCHANGE
-                            careportalEvent.json = jsonObject.toString()
-                            MainApp.getDbHelper().createOrUpdate(careportalEvent)
                             NSUpload.uploadCareportalEntryToNS(jsonObject)
                         }
                 }

@@ -54,8 +54,6 @@ class CareDialog : DialogFragmentWithDate() {
         super.onSaveInstanceState(savedInstanceState)
         savedInstanceState.putDouble("actions_care_bg", actions_care_bg.value)
         savedInstanceState.putDouble("actions_care_duration", actions_care_duration.value)
-        savedInstanceState.putInt("event", event)
-        savedInstanceState.putInt("options", options.ordinal)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -66,11 +64,6 @@ class CareDialog : DialogFragmentWithDate() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        savedInstanceState?.let {
-            event = savedInstanceState.getInt("event", R.string.error)
-            options = EventType.values()[savedInstanceState.getInt("options", 0)]
-        }
 
         actions_care_icon.setImageResource(when (options) {
             EventType.BGCHECK        -> R.drawable.icon_cp_bgcheck
@@ -187,7 +180,6 @@ class CareDialog : DialogFragmentWithDate() {
                     EventType.EXERCISE       -> CareportalEvent.EXERCISE
                 }
                 careportalEvent.json = json.toString()
-                log.debug("USER ENTRY: CAREPORTAL ${careportalEvent.eventType} json: ${careportalEvent.json}")
                 MainApp.getDbHelper().createOrUpdate(careportalEvent)
                 NSUpload.uploadCareportalEntryToNS(json)
             }, null)

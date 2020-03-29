@@ -44,11 +44,11 @@ class EditActionDialog : DialogFragmentWithDate() {
         return true
     }
 
-    override fun onSaveInstanceState(savedInstanceState: Bundle) {
-        super.onSaveInstanceState(savedInstanceState)
+    override fun onSaveInstanceState(bundle: Bundle) {
+        super.onSaveInstanceState(bundle)
         action?.let {
-            savedInstanceState.putInt("actionPosition", actionPosition)
-            savedInstanceState.putString("action", it.toJSON())
+            bundle.putInt("actionPosition", actionPosition)
+            bundle.putString("action", it.toJSON())
         }
     }
 }
