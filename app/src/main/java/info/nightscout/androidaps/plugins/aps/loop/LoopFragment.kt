@@ -71,17 +71,20 @@ class LoopFragment : Fragment() {
     fun updateGUI() {
         if (loop_request == null) return
         LoopPlugin.lastRun?.let {
-            loop_request.text = it.request?.toSpanned() ?: ""
-            loop_constraintsprocessed.text = it.constraintsProcessed?.toSpanned() ?: ""
-            loop_source.text = it.source ?: ""
-            loop_lastrun.text = it.lastAPSRun?.let { lastRun -> DateUtil.dateAndTimeString(lastRun.time) }
-                    ?: ""
-            loop_lastenact.text = it.lastAPSRun?.let { lastEnact -> DateUtil.dateAndTimeString(lastEnact.time) }
-                    ?: ""
-            loop_tbrsetbypump.text = it.tbrSetByPump?.let { tbrSetByPump -> HtmlHelper.fromHtml(tbrSetByPump.toHtml()) }
-                    ?: ""
-            loop_smbsetbypump.text = it.smbSetByPump?.let { smbSetByPump -> HtmlHelper.fromHtml(smbSetByPump.toHtml()) }
-                    ?: ""
+            loop_request?.text = it.request?.toSpanned() ?: ""
+            loop_constraintsprocessed?.text = it.constraintsProcessed?.toSpanned() ?: ""
+            loop_source?.text = it.source ?: ""
+            loop_lastrun?.text = it.lastAPSRun?.let { lastRun -> DateUtil.dateAndTimeString(lastRun.time) }
+                ?: ""
+            loop_smbrequest_time?.text = DateUtil.dateAndTimeAndSecondsString(it.lastSMBRequest)
+            loop_smbexecution_time?.text = DateUtil.dateAndTimeAndSecondsString(it.lastSMBEnact)
+            loop_tbrrequest_time?.text = DateUtil.dateAndTimeAndSecondsString(it.lastTBRRequest)
+            loop_tbrexecution_time?.text = DateUtil.dateAndTimeAndSecondsString(it.lastTBREnact)
+
+            loop_tbrsetbypump?.text = it.tbrSetByPump?.let { tbrSetByPump -> HtmlHelper.fromHtml(tbrSetByPump.toHtml()) }
+                ?: ""
+            loop_smbsetbypump?.text = it.smbSetByPump?.let { smbSetByPump -> HtmlHelper.fromHtml(smbSetByPump.toHtml()) }
+                ?: ""
 
             val constraints =
                     it.constraintsProcessed?.let { constraintsProcessed ->
@@ -96,14 +99,16 @@ class LoopFragment : Fragment() {
 
     @Synchronized
     private fun clearGUI() {
-        if (loop_request == null) return
-        loop_request.text = ""
-        loop_constraints.text = ""
-        loop_constraintsprocessed.text = ""
-        loop_source.text = ""
-        loop_lastrun.text = ""
-        loop_lastenact.text = ""
-        loop_tbrsetbypump.text = ""
-        loop_smbsetbypump.text = ""
+        loop_request?.text = ""
+        loop_constraints?.text = ""
+        loop_constraintsprocessed?.text = ""
+        loop_source?.text = ""
+        loop_lastrun?.text = ""
+        loop_smbrequest_time?.text = ""
+        loop_smbexecution_time?.text = ""
+        loop_tbrrequest_time?.text = ""
+        loop_tbrexecution_time?.text = ""
+        loop_tbrsetbypump?.text = ""
+        loop_smbsetbypump?.text = ""
     }
 }
